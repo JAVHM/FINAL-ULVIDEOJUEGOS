@@ -16,7 +16,7 @@ public class TGen : MonoBehaviour
         if (target.position.z > chunkSize - 300)
         {
             GameObject g = Instantiate(inst, transform.position + new Vector3(0, 0, chunkSize), Quaternion.identity);
-            g.GetComponent<Waves>().offSetY += (int)chunkSize;
+            g.GetComponent<Waves>().offSetY += (int)chunkSize; ;
             chunkSize += 250;
             Debug.Log("Next Chunk | " + chunkSize); 
         }
