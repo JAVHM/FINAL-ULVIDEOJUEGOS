@@ -43,6 +43,8 @@ namespace MFlight
         private Vector3 frozenDirection = Vector3.forward;
         private bool isMouseAimFrozen = false;
 
+        public Transform compas = null;
+
         /// <summary>
         /// Get a point along the aircraft's boresight projected out to aimDistance meters.
         /// Useful for drawing a crosshair to aim fixed forward guns with, or to indicate what
@@ -76,6 +78,14 @@ namespace MFlight
                 {
                     return transform.forward * aimDistance;
                 }
+            }
+        }
+
+        public Vector3 Compas
+        {
+            get
+            {
+                return (compas.transform.forward * aimDistance) + compas.transform.position;
             }
         }
 
@@ -192,7 +202,6 @@ namespace MFlight
                     Gizmos.color = Color.white;
                     Gizmos.DrawWireSphere(BoresightPos, 10f);
                 }
-
                 if (mouseAim != null)
                 {
                     // Draw the position of the mouse aim position.

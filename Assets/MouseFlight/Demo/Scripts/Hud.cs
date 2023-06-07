@@ -15,18 +15,13 @@ namespace MFlight.Demo
         [Header("HUD Elements")]
         [SerializeField] private RectTransform boresight = null;
         [SerializeField] private RectTransform mousePos = null;
+        [SerializeField] private RectTransform compasPos = null;
 
         private Camera playerCam = null;
 
         private void Awake()
         {
-            if (mouseFlight == null)
-                Debug.LogError(name + ": Hud - Mouse Flight Controller not assigned!");
-
             playerCam = mouseFlight.GetComponentInChildren<Camera>();
-
-            if (playerCam == null)
-                Debug.LogError(name + ": Hud - No camera found on assigned Mouse Flight Controller!");
         }
 
         private void Update()
@@ -49,6 +44,12 @@ namespace MFlight.Demo
             {
                 mousePos.position = playerCam.WorldToScreenPoint(controller.MouseAimPos);
                 mousePos.gameObject.SetActive(mousePos.position.z > 1f);
+            }
+
+            if (mousePos != null)
+            {
+                compasPos.position = playerCam.WorldToScreenPoint(controller.Compas);
+                compasPos.gameObject.SetActive(compasPos.position.z > 1f);
             }
         }
 

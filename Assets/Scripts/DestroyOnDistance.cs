@@ -21,8 +21,10 @@ public class DestroyOnDistance : MonoBehaviour
             float distance = Mathf.Abs(playerObject.transform.position.z - transform.position.z);
 
             // Si la distancia en el eje Z es mayor a 200, destruir el GameObject
-            if (distance > 400f * multiplier)
+            if (distance > 9000)
             {
+                Debug.Log(distance);
+                Debug.Log("DEstroy");
                 Destroy(gameObject);
             }
         }

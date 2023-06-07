@@ -18,7 +18,7 @@ public class Waves : MonoBehaviour
     public int offSetX = 0;
 
     private int frameCount = 0;
-    private int frameDelay = 30;
+    private int frameDelay = 17;
 
 
     // Start is called before the first frame update
@@ -37,8 +37,8 @@ public class Waves : MonoBehaviour
         MeshFilter = gameObject.AddComponent<MeshFilter>();
         MeshFilter.mesh = Mesh;
 
-        //Generate();
-        GenerateSoloStart();
+        Generate();
+        //GenerateSoloStart();
     }
 
     public float GetHeight(Vector3 position)
@@ -148,7 +148,7 @@ public class Waves : MonoBehaviour
         if (frameCount >= frameDelay)
         {
             // Realizar la lógica que deseas ejecutar cada dos frames
-            //Generate();
+            Generate();
             frameCount = 0; // Reiniciar el contador de frames
         }
     }
