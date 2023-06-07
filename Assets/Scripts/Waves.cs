@@ -15,6 +15,11 @@ public class Waves : MonoBehaviour
     protected Mesh Mesh;
 
     public int offSetY = 0;
+    public int offSetX = 0;
+
+    private int frameCount = 0;
+    private int frameDelay = 15;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +37,7 @@ public class Waves : MonoBehaviour
         MeshFilter = gameObject.AddComponent<MeshFilter>();
         MeshFilter.mesh = Mesh;
 
-        //Generate();
+        Generate();
     }
 
     public float GetHeight(Vector3 position)
@@ -137,7 +142,14 @@ public class Waves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Generate();
+        frameCount++;
+
+        if (frameCount >= frameDelay)
+        {
+            // Realizar la lógica que deseas ejecutar cada dos frames
+            Generate();
+            frameCount = 0; // Reiniciar el contador de frames
+        }
     }
 
     [Serializable]
@@ -161,12 +173,12 @@ public class Waves : MonoBehaviour
                 {
                     if (Octaves[o].alternate)
                     {
-                        var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y) / Dimension) * Mathf.PI * 2f;
+                        var perl = Mathf.PerlinNoise(((x + offSetX) * Octaves[o].scale.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y) / Dimension) * Mathf.PI * 2f;
                         y += Mathf.Cos(perl + Octaves[o].speed.magnitude * Time.time) * Octaves[o].height;
                     }
                     else
                     {
-                        var perl = Mathf.PerlinNoise((x * Octaves[o].scale.x + Time.time * Octaves[o].speed.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y + Time.time * Octaves[o].speed.y) / Dimension) - 0.5f;
+                        var perl = Mathf.PerlinNoise(((x + offSetX) * Octaves[o].scale.x + Time.time * Octaves[o].speed.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y + Time.time * Octaves[o].speed.y) / Dimension) - 0.5f;
                         y += perl * Octaves[o].height;
                     }
                 }
