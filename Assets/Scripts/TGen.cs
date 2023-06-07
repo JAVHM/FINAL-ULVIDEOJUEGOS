@@ -15,7 +15,7 @@ public class TGen : MonoBehaviour
     }
     void Update()
     {
-        if (target.position.z > (chunkSize - 100) * multiplier)
+        if (target.position.z > (chunkSize - 100) * (multiplier-1))
         {
             GameObject g = Instantiate(inst, transform.position + new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
             g.GetComponent<Waves>().offSetY += (int)chunkSize;
@@ -23,9 +23,9 @@ public class TGen : MonoBehaviour
             GameObject gi = Instantiate(inst, transform.position + new Vector3(-chunkSizeX * multiplier, 0, chunkSize * multiplier ), Quaternion.identity);
             gi.GetComponent<Waves>().offSetY += (int)chunkSize;
             gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
-            /*GameObject gd = Instantiate(inst, transform.position + new Vector3(chunkSizeX, 0, chunkSize), Quaternion.identity);
+            GameObject gd = Instantiate(inst, transform.position + new Vector3(chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
             gd.GetComponent<Waves>().offSetY += (int)chunkSize;
-            gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;*/
+            gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
 
             chunkSize += 250;
         }

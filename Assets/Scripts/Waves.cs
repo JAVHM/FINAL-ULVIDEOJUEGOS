@@ -18,7 +18,7 @@ public class Waves : MonoBehaviour
     public int offSetX = 0;
 
     private int frameCount = 0;
-    private int frameDelay = 15;
+    private int frameDelay = 30;
 
 
     // Start is called before the first frame update
@@ -37,7 +37,8 @@ public class Waves : MonoBehaviour
         MeshFilter = gameObject.AddComponent<MeshFilter>();
         MeshFilter.mesh = Mesh;
 
-        Generate();
+        //Generate();
+        GenerateSoloStart();
     }
 
     public float GetHeight(Vector3 position)
@@ -147,7 +148,7 @@ public class Waves : MonoBehaviour
         if (frameCount >= frameDelay)
         {
             // Realizar la lógica que deseas ejecutar cada dos frames
-            Generate();
+            //Generate();
             frameCount = 0; // Reiniciar el contador de frames
         }
     }
@@ -179,6 +180,34 @@ public class Waves : MonoBehaviour
                     else
                     {
                         var perl = Mathf.PerlinNoise(((x + offSetX) * Octaves[o].scale.x + Time.time * Octaves[o].speed.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y + Time.time * Octaves[o].speed.y) / Dimension) - 0.5f;
+                        y += perl * Octaves[o].height;
+                    }
+                }
+
+                verts[index(x, z)] = new Vector3(x, y, z);
+            }
+        }
+        Mesh.vertices = verts;
+        Mesh.RecalculateNormals();
+    }
+    public void GenerateSoloStart()
+    {
+        var verts = Mesh.vertices;
+        for (int x = 0; x <= Dimension; x++)
+        {
+            for (int z = 0; z <= Dimension; z++)
+            {
+                var y = 0f;
+                for (int o = 0; o < Octaves.Length; o++)
+                {
+                    if (Octaves[o].alternate)
+                    {
+                        var perl = Mathf.PerlinNoise(((x + offSetX) * Octaves[o].scale.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y) / Dimension) * Mathf.PI * 2f;
+                        y += Mathf.Cos(perl + Octaves[o].speed.magnitude) * Octaves[o].height;
+                    }
+                    else
+                    {
+                        var perl = Mathf.PerlinNoise(((x + offSetX) * Octaves[o].scale.x * Octaves[o].speed.x) / Dimension, ((z + offSetY) * Octaves[o].scale.y * Octaves[o].speed.y) / Dimension) - 0.5f;
                         y += perl * Octaves[o].height;
                     }
                 }
