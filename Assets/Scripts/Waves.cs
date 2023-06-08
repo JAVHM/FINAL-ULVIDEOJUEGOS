@@ -14,11 +14,11 @@ public class Waves : MonoBehaviour
     protected MeshFilter MeshFilter;
     protected Mesh Mesh;
 
-    public int offSetY = 0;
-    public int offSetX = 0;
+    public float offSetY = 0;
+    public float offSetX = 0;
 
     private int frameCount = 0;
-    private int frameDelay = 17;
+    private int frameDelay = 22;
 
 
     // Start is called before the first frame update
