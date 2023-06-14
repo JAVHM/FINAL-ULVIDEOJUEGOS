@@ -12,7 +12,19 @@ public class TGen : MonoBehaviour
 
     private void Start()
     {
+        GameObject g = Instantiate(gameObjectsArray[0], new Vector3(0, 0, 0), Quaternion.identity);
+        g.transform.localScale = new Vector3(multiplier, 1, multiplier);
+        g.GetComponent<Waves>().offSetY += 0;
 
+        GameObject gi = Instantiate(gameObjectsArray[0], new Vector3(-chunkSizeX * multiplier, 0, 0), Quaternion.identity);
+        gi.transform.localScale = new Vector3(multiplier, 1, multiplier);
+        gi.GetComponent<Waves>().offSetY += 0;
+        gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
+
+        GameObject gd = Instantiate(gameObjectsArray[0], new Vector3(chunkSizeX * multiplier, 0, 0), Quaternion.identity);
+        gd.transform.localScale = new Vector3(multiplier, 1, multiplier);
+        gd.GetComponent<Waves>().offSetY += 0;
+        gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
     }
     void Update()
     {
@@ -22,21 +34,18 @@ public class TGen : MonoBehaviour
             selectedRow = GenerateMap(actualRow);
 
             GameObject g = Instantiate(gameObjectsArray[selectedRow[1]], new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
+            g.transform.localScale = new Vector3(multiplier, 1, multiplier);
             g.GetComponent<Waves>().offSetY += (int)chunkSize;
 
             GameObject gi = Instantiate(gameObjectsArray[selectedRow[0]], new Vector3(-chunkSizeX * multiplier, 0, chunkSize * multiplier ), Quaternion.identity);
+            gi.transform.localScale = new Vector3(multiplier, 1, multiplier);
             gi.GetComponent<Waves>().offSetY += (int)chunkSize;
             gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
+
             GameObject gd = Instantiate(gameObjectsArray[selectedRow[2]], new Vector3(chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
+            gd.transform.localScale = new Vector3(multiplier, 1, multiplier);
             gd.GetComponent<Waves>().offSetY += (int)chunkSize;
             gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
-
-            /*GameObject gi2 = Instantiate(inst, transform.position + new Vector3(-chunkSizeX * multiplier * 2, 0, chunkSize * multiplier), Quaternion.identity);
-            gi2.GetComponent<Waves>().offSetY += (int)chunkSize * 2;
-            gi2.GetComponent<Waves>().offSetX -= (int)chunkSizeX * 2;
-            GameObject gd2 = Instantiate(inst, transform.position + new Vector3(chunkSizeX * multiplier * 2 , 0, chunkSize * multiplier), Quaternion.identity);
-            gd2.GetComponent<Waves>().offSetY += (int)chunkSize * 2;
-            gd2.GetComponent<Waves>().offSetX += (int)chunkSizeX * 2;*/
 
             chunkSize += 250;
         }
