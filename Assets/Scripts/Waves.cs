@@ -18,7 +18,7 @@ public class Waves : MonoBehaviour
     public float offSetX = 0;
 
     private int frameCount = 0;
-    private int frameDelay = 1;
+    private int frameDelay = 20;
 
 
     // Start is called before the first frame update
