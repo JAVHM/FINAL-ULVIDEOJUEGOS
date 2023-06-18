@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class LGen : MonoBehaviour
@@ -9,35 +10,23 @@ public class LGen : MonoBehaviour
     public float multiplier = 2;
     int actualRow = 0;
     public int chance = 100;
+    bool temp = true;
 
     private void Start()
     {
         /*GameObject g = Instantiate(gameObjectsArray[0], new Vector3(0, 0, 0), Quaternion.identity);
         GameObject gi = Instantiate(gameObjectsArray[0], new Vector3(-chunkSizeX * multiplier, 0, 0), Quaternion.identity);
         GameObject gd = Instantiate(gameObjectsArray[0], new Vector3(chunkSizeX * multiplier, 0, 0), Quaternion.identity);*/
+        chunkSize += 250;
+        CreateObstacles();
+        chunkSize += 250;
     }
     void Update()
     {
-        if (target.position.z + (400 * multiplier) > chunkSize  * multiplier)
+        if ((target.position.z + (600 * multiplier) > chunkSize  * multiplier) && temp == true)
         {
-            int[] selectedRow = new int[3];
-            selectedRow = GenerateMap(actualRow);
-            
-            int rand = Random.Range(0, 100);
-
-            if(rand < chance){
-                GameObject g = Instantiate(gameObjectsArray[selectedRow[1]], new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
-            }
-            rand = Random.Range(0, 100);
-            if(rand < chance){
-                //GameObject gi = Instantiate(gameObjectsArray[selectedRow[0]], new Vector3(-chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
-            }
-            rand = Random.Range(0, 100);
-            if(rand < chance){
-                //GameObject gd = Instantiate(gameObjectsArray[selectedRow[2]], new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
-            }
-            
-            chunkSize += 250;
+            temp = false;
+            StartCoroutine(CreateCoroutine());
         }
     }
     public GameObject[] gameObjectsArray;
@@ -72,8 +61,68 @@ public class LGen : MonoBehaviour
         return selectedRow;
     }
 
-    void InstantiateRow()
+    public int[] GetRow(int rowSelected)
     {
+        int columns = 10;
+        // Retornar una fila aleatoria de la matriz
+        int[] selectedRow = new int[columns];
+        for (int col = 0; col < columns; col++)
+        {
+            selectedRow[col] = map[rowSelected, col];
+        }
 
+        return selectedRow;
+    }
+
+    public void CreateObstacles()
+    {
+        int[] selectedRow = new int[3];
+        selectedRow = GenerateMap(actualRow);
+
+        int rand = Random.Range(0, 100);
+
+        if (rand < chance)
+        {
+            GameObject g = Instantiate(gameObjectsArray[selectedRow[1]], new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        }
+        rand = Random.Range(0, 100);
+        if (rand < chance)
+        {
+            GameObject gi = Instantiate(gameObjectsArray[selectedRow[0]], new Vector3(-chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        }
+        rand = Random.Range(0, 100);
+        if (rand < chance)
+        {
+            GameObject gd = Instantiate(gameObjectsArray[selectedRow[2]], new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        }
+    }
+
+    private IEnumerator CreateCoroutine()
+    {
+        int[] selectedRow = new int[3];
+        selectedRow = GenerateMap(actualRow);
+
+        int rand = Random.Range(0, 100);
+
+        if (rand < chance)
+        {
+            GameObject g = Instantiate(gameObjectsArray[selectedRow[1]], new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        }
+        yield return new WaitForSeconds(1f);
+        rand = Random.Range(0, 100);
+        if (rand < chance)
+        {
+            GameObject gi = Instantiate(gameObjectsArray[selectedRow[0]], new Vector3(-chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        }
+        yield return new WaitForSeconds(1f);
+        rand = Random.Range(0, 100);
+        if (rand < chance)
+        {
+            GameObject gd = Instantiate(gameObjectsArray[selectedRow[2]], new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        }
+        yield return new WaitForSeconds(1f);
+
+        chunkSize += 250;
+        temp = true;
     }
 }

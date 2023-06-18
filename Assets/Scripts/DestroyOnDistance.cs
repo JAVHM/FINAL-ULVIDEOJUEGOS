@@ -23,7 +23,6 @@ public class DestroyOnDistance : MonoBehaviour
             // Si la distancia en el eje Z es mayor a 200, destruir el GameObject
             if (distance + (250 + 200) * multiplier < 0)
             {
-                Debug.Log("DEstroy");
                 Destroy(gameObject);
             }
         }
