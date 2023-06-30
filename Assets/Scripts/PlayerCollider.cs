@@ -7,6 +7,7 @@ public class PlayerCollider : MonoBehaviour
 {
     // Specify the tag of the objects to destroy the collider
     public string obstacleTag = "Obstacle";
+    public string portalTag = "Portal";
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -18,6 +19,10 @@ public class PlayerCollider : MonoBehaviour
 
             // Reload the current scene by loading it again
             SceneManager.LoadScene(currentSceneIndex);
+        }
+        if (collision.gameObject.CompareTag(obstacleTag))
+        {
+            Debug.Log("AAAAAAAAAAA");
         }
     }
 }

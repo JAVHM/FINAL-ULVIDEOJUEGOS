@@ -14,7 +14,9 @@ public class TGen : MonoBehaviour
     public Waves waves;
     int actualRow = 0;
     public int altura = 1500;
-    bool temp = true;
+    bool waitingGeneration = true;
+
+    bool  temp = false;
 
     private void Start()
     {
@@ -27,9 +29,9 @@ public class TGen : MonoBehaviour
     }
     void Update()
     {
-        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && temp && chunkSize * multiplier <= 250 * multiplier * (chuncksPerArea + 3))
+        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && waitingGeneration && chunkSize * multiplier <= 250 * multiplier * (chuncksPerArea + 3))
         {
-            temp = false;
+            waitingGeneration = false;
             StartCoroutine(CreateInferiorCoroutine());
 
             StartCoroutine(CreateSuperiorCoroutine());
@@ -37,6 +39,13 @@ public class TGen : MonoBehaviour
             if(chunkSize * multiplier >= 250 * multiplier * (chuncksPerArea + 3))
             {
                 InstantiatePortals();
+                chunkSize += 250;
+                CreateInferior();
+                CreateSuperior();
+
+                chunkSize += 250;
+                CreateInferior();
+                CreateSuperior();
             }
         }
     }
@@ -122,7 +131,7 @@ public class TGen : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         chunkSize += 250;
-        temp = true;
+        waitingGeneration = true;
     }
 
     public void InstantiatePortals()
