@@ -848,6 +848,7 @@ MonoBehaviour:
   inst: {fileID: 0}
   chunkSize: 0
   chunkSizeX: 250
+  chuncksPerArea: 30
   multiplier: 30
   chance: 100
   gameObjectsArray:
@@ -872,8 +873,10 @@ MonoBehaviour:
   target: {fileID: 1976954658}
   inst: {fileID: 5812364402108702804, guid: 02f4123bb3bcf0242a0637c33d4a909a, type: 3}
   instSky: {fileID: 1507248383727698271, guid: 6ceb8ea1543fe6741ad136d19993d21a, type: 3}
+  instPortal: {fileID: 7829753972771283583, guid: a9ea11db26589394892fae29dccfee1c, type: 3}
   chunkSize: 0
   chunkSizeX: 250
+  chuncksPerArea: 30
   multiplier: 30
   waves: {fileID: 0}
   altura: 2000
@@ -1081,6 +1084,22 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 65470979923239614, guid: 76845026de374da4aa455cd164e63143, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65470979923239614, guid: 76845026de374da4aa455cd164e63143, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65881446311299584, guid: 76845026de374da4aa455cd164e63143, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65881446311299584, guid: 76845026de374da4aa455cd164e63143, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114329657595640044, guid: 76845026de374da4aa455cd164e63143, type: 3}
       propertyPath: thrust
       value: 1500
@@ -1111,7 +1130,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114329657595640044, guid: 76845026de374da4aa455cd164e63143, type: 3}
       propertyPath: velocidadMovimientoMax
-      value: 2000
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 136863792910642262, guid: 76845026de374da4aa455cd164e63143, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136863792910642262, guid: 76845026de374da4aa455cd164e63143, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76845026de374da4aa455cd164e63143, type: 3}

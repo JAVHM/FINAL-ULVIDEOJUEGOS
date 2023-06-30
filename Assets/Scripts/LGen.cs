@@ -7,6 +7,7 @@ public class LGen : MonoBehaviour
     public GameObject inst;
     public float chunkSize;
     public float chunkSizeX = 250;
+    public int chuncksPerArea = 10;
     public float multiplier = 2;
     int actualRow = 0;
     public int chance = 100;
@@ -23,7 +24,8 @@ public class LGen : MonoBehaviour
     }
     void Update()
     {
-        if ((target.position.z + (600 * multiplier) > chunkSize  * multiplier) && temp == true)
+        Debug.Log(chunkSize * multiplier);
+        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && temp && chunkSize * multiplier <= 250 * multiplier * chuncksPerArea)
         {
             temp = false;
             StartCoroutine(CreateCoroutine());
@@ -99,6 +101,7 @@ public class LGen : MonoBehaviour
 
     private IEnumerator CreateCoroutine()
     {
+        
         int[] selectedRow = new int[3];
         selectedRow = GenerateMap(actualRow);
 
@@ -108,19 +111,19 @@ public class LGen : MonoBehaviour
         {
             GameObject g = Instantiate(gameObjectsArray[selectedRow[1]], new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         rand = Random.Range(0, 100);
         if (rand < chance)
         {
             GameObject gi = Instantiate(gameObjectsArray[selectedRow[0]], new Vector3(-chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         rand = Random.Range(0, 100);
         if (rand < chance)
         {
             GameObject gd = Instantiate(gameObjectsArray[selectedRow[2]], new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
 
         chunkSize += 250;
         temp = true;
