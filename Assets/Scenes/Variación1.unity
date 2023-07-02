@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fogShader: {fileID: 4800000, guid: a59c1a142e0c5bd4899e2ba811bc0fcc, type: 3}
-  fogColor: {r: 0.13305447, g: 0.19290969, b: 0.24528301, a: 1}
+  fogColor: {r: 0.17755428, g: 0.4272904, b: 0.6603774, a: 1}
   fogDensity: 0.02
   fogOffset: 9750
 --- !u!1001 &1006892528
@@ -1320,6 +1320,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1509154689, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1976954658}
+    - target: {fileID: 1509154689, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
+      propertyPath: chuncksPerArea
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5167696249173477901, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1367,26 +1375,6 @@ PrefabInstance:
     - target: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_Name
       value: GeneratorTutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 5167696249173478130, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1976954658}
-    - target: {fileID: 5167696249173478131, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: chance
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5167696249173478131, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1976954658}
-    - target: {fileID: 5167696249173478131, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5167696249173478131, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: chuncksPerArea
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}

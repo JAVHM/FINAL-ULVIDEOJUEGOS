@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generator: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
+  target: {fileID: 0}
+  colorOG: {r: 0, g: 0, b: 0, a: 0}
+  colorMayor500: {r: 0.1764706, g: 0.42745098, b: 0.65882355, a: 1}
 --- !u!1 &1932038682438042474
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generator: {fileID: 0}
+  target: {fileID: 0}
+  colorOG: {r: 0, g: 0, b: 0, a: 0}
+  colorMayor500: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5290445676181997236
 GameObject:
   m_ObjectHideFlags: 0

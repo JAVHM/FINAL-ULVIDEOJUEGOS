@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1343253163880822663}
-  - component: {fileID: 1343253163880822662}
-  - component: {fileID: 1343253163880822665}
+  - component: {fileID: 3183367593136123881}
   m_Layer: 0
   m_Name: GeneratorDeepOcean
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1343253163880822662
+--- !u!114 &3183367593136123881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,43 +41,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1343253163880822664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9ae9dbd5c7c584892d2bafb1a10c83, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b78a6154229dd24c96e25c831f31d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  inst: {fileID: 6124152729582160353, guid: 72f59499f8ddfab439bf574cfe260255, type: 3}
-  instSky: {fileID: 5427815677010826017, guid: 826fdc80d3564064da70a7beda6f6bbd, type: 3}
+  inferior: {fileID: 6124152729582160353, guid: 72f59499f8ddfab439bf574cfe260255, type: 3}
+  superior: {fileID: 5427815677010826017, guid: 826fdc80d3564064da70a7beda6f6bbd, type: 3}
   instPortal: {fileID: 5290445676635617347, guid: 3b394927d3cb21d48ae6e31558873dfe, type: 3}
   chunkSize: 0
   chunkSizeX: 250
-  chuncksPerArea: 5
+  chuncksPerArea: 10
   chunckCount: 1
   multiplier: 30
   waves: {fileID: 0}
-  altura: 2000
---- !u!114 &1343253163880822665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343253163880822664}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c35c3c2de9a9b42a3b8fbd95e20d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  inst: {fileID: 0}
-  chunkSize: 0
-  chunkSizeX: 250
-  chuncksPerArea: 30
-  multiplier: 30
+  altura: 1500
   chance: 100
   gameObjectsArray:
-  - {fileID: 7374706046114964017, guid: 38072c0e40a764c4f90ae84b2fd717a7, type: 3}
-  - {fileID: 8288044099361046959, guid: 78466c3d3a5f4894e96d4af8ba8e41b7, type: 3}
   - {fileID: 7667101005593571870, guid: fac6f6b205dfc634ca6c388d1db00767, type: 3}
+  - {fileID: 7374706046114964017, guid: 38072c0e40a764c4f90ae84b2fd717a7, type: 3}
   - {fileID: 6382675290381792544, guid: 2a02d98b4cead344faddff14c12d3be1, type: 3}
+  - {fileID: 8288044099361046959, guid: 78466c3d3a5f4894e96d4af8ba8e41b7, type: 3}
   - {fileID: 6241073773386540853, guid: c27d02aaf0a98ec44b644bd2269e671e, type: 3}
   - {fileID: 4581605355846719550, guid: 12dfd56ff131da147aa31dc204937657, type: 3}

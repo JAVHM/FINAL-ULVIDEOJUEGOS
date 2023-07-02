@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5167696249173477901}
-  - component: {fileID: 5167696249173478130}
-  - component: {fileID: 5167696249173478131}
+  - component: {fileID: 1509154689}
   m_Layer: 0
   m_Name: GeneratorTutorial
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5167696249173478130
+--- !u!114 &1509154689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,12 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5167696249173478128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9ae9dbd5c7c584892d2bafb1a10c83, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b78a6154229dd24c96e25c831f31d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  inst: {fileID: 5812364402108702804, guid: 02f4123bb3bcf0242a0637c33d4a909a, type: 3}
-  instSky: {fileID: 1507248383727698271, guid: 6ceb8ea1543fe6741ad136d19993d21a, type: 3}
+  inferior: {fileID: 5812364402108702804, guid: 02f4123bb3bcf0242a0637c33d4a909a, type: 3}
+  superior: {fileID: 1507248383727698271, guid: 6ceb8ea1543fe6741ad136d19993d21a, type: 3}
   instPortal: {fileID: 7829753972771283583, guid: a9ea11db26589394892fae29dccfee1c, type: 3}
   chunkSize: 0
   chunkSizeX: 250
@@ -55,30 +54,12 @@ MonoBehaviour:
   chunckCount: 1
   multiplier: 30
   waves: {fileID: 0}
-  altura: 2000
---- !u!114 &5167696249173478131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167696249173478128}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c35c3c2de9a9b42a3b8fbd95e20d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  inst: {fileID: 0}
-  chunkSize: 0
-  chunkSizeX: 250
-  chuncksPerArea: 30
-  multiplier: 30
+  altura: 1500
   chance: 100
   gameObjectsArray:
-  - {fileID: 7374706046114964017, guid: 38072c0e40a764c4f90ae84b2fd717a7, type: 3}
-  - {fileID: 8288044099361046959, guid: 78466c3d3a5f4894e96d4af8ba8e41b7, type: 3}
   - {fileID: 7667101005593571870, guid: fac6f6b205dfc634ca6c388d1db00767, type: 3}
+  - {fileID: 7374706046114964017, guid: 38072c0e40a764c4f90ae84b2fd717a7, type: 3}
   - {fileID: 6382675290381792544, guid: 2a02d98b4cead344faddff14c12d3be1, type: 3}
+  - {fileID: 8288044099361046959, guid: 78466c3d3a5f4894e96d4af8ba8e41b7, type: 3}
   - {fileID: 6241073773386540853, guid: c27d02aaf0a98ec44b644bd2269e671e, type: 3}
   - {fileID: 4581605355846719550, guid: 12dfd56ff131da147aa31dc204937657, type: 3}
