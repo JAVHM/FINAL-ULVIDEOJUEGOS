@@ -8,16 +8,14 @@ public class LGen : MonoBehaviour
     public float chunkSize;
     public float chunkSizeX = 250;
     public int chuncksPerArea = 10;
+    public int chunckCount = 1;
     public float multiplier = 2;
     int actualRow = 0;
     public int chance = 100;
-    bool temp = true;
+    bool waitingGeneration = true;
 
     private void Start()
     {
-        /*GameObject g = Instantiate(gameObjectsArray[0], new Vector3(0, 0, 0), Quaternion.identity);
-        GameObject gi = Instantiate(gameObjectsArray[0], new Vector3(-chunkSizeX * multiplier, 0, 0), Quaternion.identity);
-        GameObject gd = Instantiate(gameObjectsArray[0], new Vector3(chunkSizeX * multiplier, 0, 0), Quaternion.identity);*/
         chunkSize += 250;
         CreateObstacles();
         chunkSize += 250;
@@ -25,10 +23,13 @@ public class LGen : MonoBehaviour
     void Update()
     {
         Debug.Log(chunkSize * multiplier);
-        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && temp && chunkSize * multiplier <= 250 * multiplier * chuncksPerArea)
+        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && waitingGeneration)
         {
-            temp = false;
-            StartCoroutine(CreateCoroutine());
+            waitingGeneration = false;
+            if (chunckCount <= chuncksPerArea)
+            {
+                StartCoroutine(CreateCoroutine());
+            }
         }
     }
     public GameObject[] gameObjectsArray;
@@ -126,6 +127,7 @@ public class LGen : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         chunkSize += 250;
-        temp = true;
+        chunckCount++;
+        waitingGeneration = true;
     }
 }

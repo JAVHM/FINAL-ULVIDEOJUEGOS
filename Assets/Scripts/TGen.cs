@@ -10,6 +10,7 @@ public class TGen : MonoBehaviour
     public float chunkSize;
     public float chunkSizeX = 250;
     public int chuncksPerArea = 10;
+    public int chunckCount = 1;
     public float multiplier = 2;
     public Waves waves;
     int actualRow = 0;
@@ -20,25 +21,31 @@ public class TGen : MonoBehaviour
 
     private void Start()
     {
+        chunkSize += transform.position.z / multiplier;
+
         CreateInferior();
         CreateSuperior();
 
         chunkSize += 250;
-        CreateInferior();
-        CreateSuperior();
     }
     void Update()
     {
-        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && waitingGeneration && chunkSize * multiplier <= 250 * multiplier * (chuncksPerArea + 3))
+        if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && waitingGeneration)
         {
             waitingGeneration = false;
-            StartCoroutine(CreateInferiorCoroutine());
 
-            StartCoroutine(CreateSuperiorCoroutine());
+            if(chunckCount <= chuncksPerArea)
+            {
+                StartCoroutine(CreateInferiorCoroutine());
+                StartCoroutine(CreateSuperiorCoroutine());
+            }
 
-            if(chunkSize * multiplier >= 250 * multiplier * (chuncksPerArea + 3))
+            if(chunckCount > chuncksPerArea)
             {
                 InstantiatePortals();
+                CreateInferior();
+                CreateSuperior();
+
                 chunkSize += 250;
                 CreateInferior();
                 CreateSuperior();
@@ -46,6 +53,8 @@ public class TGen : MonoBehaviour
                 chunkSize += 250;
                 CreateInferior();
                 CreateSuperior();
+
+                Destroy(this.gameObject);
             }
         }
     }
@@ -132,6 +141,8 @@ public class TGen : MonoBehaviour
 
         chunkSize += 250;
         waitingGeneration = true;
+        chunckCount++;
+        //Debug.Log(chunckCount);
     }
 
     public void InstantiatePortals()
