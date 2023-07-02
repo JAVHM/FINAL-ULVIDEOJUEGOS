@@ -49,7 +49,16 @@ public class PortalNewArea : MonoBehaviour
             // Instanciar el objeto y asignarle la posición del objeto padre
             GameObject newObject = Instantiate(generator, new Vector3(spawnPosition.x, spawnPosition.y,spawnPosition.z + 750 * 30), Quaternion.identity);
 
-            newObject.GetComponent<AreaGenerator>().target = other.gameObject.transform;
+            if (newObject.GetComponent<CloacaGenerator>() != null)
+            {
+                newObject.GetComponent<CloacaGenerator>().target = other.gameObject.transform;
+            }
+            else if (newObject.GetComponent<HorizontalGenerator>() != null)
+            {
+                newObject.GetComponent<HorizontalGenerator>().target = other.gameObject.transform;
+            }
+
+            //newObject.GetComponent<AreaGenerator>().target = other.gameObject.transform;
             target = other.gameObject.transform;
             colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor;
         }

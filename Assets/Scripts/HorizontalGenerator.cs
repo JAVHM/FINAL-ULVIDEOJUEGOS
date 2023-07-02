@@ -2,27 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaGenerator : MonoBehaviour
+public class HorizontalGenerator : AreaGenerator
 {
-    public Transform target; // Referencia al objeto "target"
-    public GameObject inferior;
-    public GameObject superior;
-    public GameObject instPortal;
-    public float chunkSize;
-    public float chunkSizeX = 250;
-    public int chuncksPerArea = 10;
-    public int chunckCount = 1;
-    public float multiplier = 2;
-    public Waves waves;
-    public int actualRow = 0;
-    public int altura = 1500;
-    public bool waitingGeneration = true;
-
-    public int chance = 100;
-    public GameObject[] gameObjectsArray;
-
-    public bool temp = false;
-
     private void Start()
     {
         chunkSize += transform.position.z / multiplier;
@@ -68,7 +49,7 @@ public class AreaGenerator : MonoBehaviour
     }
 
 
-    public virtual void CreateInferior()
+    public void CreateInferior()
     {
         GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
