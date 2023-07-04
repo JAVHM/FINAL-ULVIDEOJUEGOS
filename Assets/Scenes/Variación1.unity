@@ -883,45 +883,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1509154685 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-  m_PrefabInstance: {fileID: 5167696248499164557}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1509154690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509154685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e6ef4aa4b62a64db402dc23d3093b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1976954658}
-  inferior: {fileID: 5812364402108702804, guid: 02f4123bb3bcf0242a0637c33d4a909a, type: 3}
-  superior: {fileID: 1507248383727698271, guid: 6ceb8ea1543fe6741ad136d19993d21a, type: 3}
-  instPortal: {fileID: 7829753972771283583, guid: a9ea11db26589394892fae29dccfee1c, type: 3}
-  chunkSize: 0
-  chunkSizeX: 250
-  chuncksPerArea: 10
-  chunckCount: 1
-  multiplier: 30
-  waves: {fileID: 0}
-  actualRow: 0
-  altura: 2000
-  waitingGeneration: 1
-  chance: 100
-  gameObjectsArray:
-  - {fileID: 7667101005593571870, guid: fac6f6b205dfc634ca6c388d1db00767, type: 3}
-  - {fileID: 7374706046114964017, guid: 38072c0e40a764c4f90ae84b2fd717a7, type: 3}
-  - {fileID: 6382675290381792544, guid: 2a02d98b4cead344faddff14c12d3be1, type: 3}
-  - {fileID: 8288044099361046959, guid: 78466c3d3a5f4894e96d4af8ba8e41b7, type: 3}
-  - {fileID: 6241073773386540853, guid: c27d02aaf0a98ec44b644bd2269e671e, type: 3}
-  - {fileID: 4581605355846719550, guid: 12dfd56ff131da147aa31dc204937657, type: 3}
-  temp: 0
 --- !u!1 &1582811082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,22 +1389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1509154689, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: altura
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509154689, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
+    - target: {fileID: 1509154690, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1976954658}
-    - target: {fileID: 1509154689, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1509154689, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: chuncksPerArea
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5167696249173477901, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1491,10 +1440,6 @@ PrefabInstance:
     - target: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_Name
       value: GeneratorTutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}

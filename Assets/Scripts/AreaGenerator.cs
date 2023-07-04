@@ -7,6 +7,7 @@ public class AreaGenerator : MonoBehaviour
     public Transform target; // Referencia al objeto "target"
     public GameObject inferior;
     public GameObject superior;
+    public GameObject lateral;
     public GameObject instPortal;
     public float chunkSize;
     public float chunkSizeX = 250;
