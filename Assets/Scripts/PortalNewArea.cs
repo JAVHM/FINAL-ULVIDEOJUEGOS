@@ -57,6 +57,10 @@ public class PortalNewArea : MonoBehaviour
             {
                 newObject.GetComponent<HorizontalGenerator>().target = other.gameObject.transform;
             }
+            else if (newObject.GetComponent<VerticalGenerator>() != null)
+            {
+                newObject.GetComponent<VerticalGenerator>().target = other.gameObject.transform;
+            }
 
             //newObject.GetComponent<AreaGenerator>().target = other.gameObject.transform;
             target = other.gameObject.transform;
