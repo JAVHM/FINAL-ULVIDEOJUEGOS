@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
@@ -672,17 +672,13 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 886200133}
-    - target: {fileID: 5015706939080574017, guid: 1b8208e021cc4d843ae42356baacc1e5, type: 3}
-      propertyPath: chunckCount
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5015706939080574023, guid: 1b8208e021cc4d843ae42356baacc1e5, type: 3}
       propertyPath: m_Name
       value: GeneratorVolcan
       objectReference: {fileID: 0}
     - target: {fileID: 5015706939080574023, guid: 1b8208e021cc4d843ae42356baacc1e5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b8208e021cc4d843ae42356baacc1e5, type: 3}

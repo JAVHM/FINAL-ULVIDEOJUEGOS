@@ -52,7 +52,7 @@ MonoBehaviour:
   chunkSize: 0
   chunkSizeX: 250
   chuncksPerArea: 10
-  chunckCount: 1
+  chunckCount: 5
   multiplier: 30
   waves: {fileID: 0}
   actualRow: 0
