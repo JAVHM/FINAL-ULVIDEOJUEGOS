@@ -10,6 +10,7 @@ public class VerticalGenerator : AreaGenerator
 
         CreateInferior();
         CreateLaterals();
+        CreateEntrance();
         CreateSuperior();
 
         chunkSize += 250;
@@ -81,7 +82,7 @@ public class VerticalGenerator : AreaGenerator
 
     public void CreateLaterals()
     {
-        GameObject gi = Instantiate(lateral, new Vector3(0, chunkSizeX * multiplier - 1000, chunkSize * multiplier), Quaternion.identity);
+        GameObject gi = Instantiate(lateral, new Vector3(0, chunkSizeX * multiplier * 2, chunkSize * multiplier), Quaternion.identity);
         gi.transform.localScale = new Vector3(multiplier*2, 1, multiplier*2);
         gi.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
         gi.GetComponent<Waves>().offSetY += (int)chunkSize;
@@ -108,14 +109,14 @@ public class VerticalGenerator : AreaGenerator
 
     private IEnumerator CreateLateralsCoroutine()
     {
-        GameObject gi = Instantiate(lateral, new Vector3(0, chunkSizeX * multiplier * 2, chunkSize * multiplier), Quaternion.identity);
+        GameObject gi = Instantiate(lateral, new Vector3(0, chunkSizeX * multiplier * 2, chunkSize * multiplier*2), Quaternion.identity);
         gi.transform.localScale = new Vector3(multiplier*2, 1, multiplier*2);
         gi.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
         gi.GetComponent<Waves>().offSetY += (int)chunkSize;
         gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
         yield return new WaitForSeconds(.3f);
 
-        GameObject gd = Instantiate(lateral, new Vector3(chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
+        GameObject gd = Instantiate(lateral, new Vector3(chunkSizeX * multiplier, 0, chunkSize * multiplier*2), Quaternion.identity);
         gd.transform.localScale = new Vector3(multiplier*2, 1, multiplier*2);
         gd.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
         gd.GetComponent<Waves>().offSetY += (int)chunkSize;
@@ -126,7 +127,7 @@ public class VerticalGenerator : AreaGenerator
         gi1.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
         gi1.GetComponent<Waves>().offSetY += (int)chunkSize;
         //gi1.GetComponent<Waves>().offSetX -= (int)chunkSizeX;*/
-        yield return new WaitForSeconds(.3f);
+        //yield return new WaitForSeconds(.3f);
 
         /*GameObject gd1 = Instantiate(lateral, new Vector3(chunkSizeX * multiplier, chunkSizeX * multiplier, chunkSize * multiplier), Quaternion.identity);
         gd1.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -198,5 +199,20 @@ public class VerticalGenerator : AreaGenerator
             GameObject g = Instantiate(gameObjectsArray[Random.Range(0, gameObjectsArray.Length)], new Vector3(chunkSizeX * multiplier / 2, chunkSizeX * multiplier , chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         }
         yield return new WaitForSeconds(.5f);
+    }
+
+    public virtual void CreateEntrance()
+    {
+        GameObject gi = Instantiate(lateral, new Vector3(-chunkSizeX * multiplier * 2, chunkSizeX * multiplier * 2, chunkSize * multiplier), Quaternion.identity);
+        gi.transform.localScale = new Vector3(multiplier * 2, 1, multiplier * 2);
+        gi.transform.rotation = Quaternion.Euler(new Vector3(0, 90, -90));
+        gi.GetComponent<Waves>().offSetY += (int)chunkSize;
+        gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
+
+        GameObject gd = Instantiate(lateral, new Vector3(chunkSizeX * multiplier * 3, 0, chunkSize * multiplier), Quaternion.identity);
+        gd.transform.localScale = new Vector3(multiplier * 2, 1, multiplier * 2);
+        gd.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 90));
+        gd.GetComponent<Waves>().offSetY += (int)chunkSize;
+        gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
     }
 }
