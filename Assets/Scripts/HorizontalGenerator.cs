@@ -18,6 +18,12 @@ public class HorizontalGenerator : AreaGenerator
     }
     void Update()
     {
+        /*Vector3 targetPosition = target.transform.position;
+        if (targetPosition.y < 0f || targetPosition.y > 2000f || targetPosition.x < - chunkSizeX * multiplier || targetPosition.x > chunkSizeX * multiplier * 2)
+        {
+            Destroy(target.gameObject);
+        }*/
+
         if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && waitingGeneration)
         {
             waitingGeneration = false;

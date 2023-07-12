@@ -55,7 +55,12 @@ public class PortalNewArea : MonoBehaviour
             }
             else if (newObject.GetComponent<HorizontalGenerator>() != null)
             {
-                newObject.GetComponent<HorizontalGenerator>().target = other.gameObject.transform;
+                HorizontalGenerator hg  = newObject.GetComponent<HorizontalGenerator>();
+                hg.target = other.gameObject.transform;
+                other.transform.parent.
+                gameObject.GetComponent<Delimitator>().
+                UpdateLimits(new Vector2(- hg.chunkSizeX * hg.multiplier, hg.chunkSizeX * hg.multiplier * 2), new Vector2(0, hg.altura), hg.chunkSizeX * hg.multiplier * 3);
+                other.transform.parent.gameObject.GetComponent<Delimitator>().needChange = true;
             }
             else if (newObject.GetComponent<VerticalGenerator>() != null)
             {
