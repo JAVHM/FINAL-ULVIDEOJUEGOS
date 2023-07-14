@@ -43,13 +43,17 @@ public class PortalNewArea : MonoBehaviour
             // Obtener la posición del objeto padre
             Vector3 spawnPosition = transform.position;
 
-            // Hacer algo cuando el objeto "Player" toque el objeto "Plane"
-            //Debug.Log("¡El jugador ha tocado el plano! " + spawnPosition);
-
             // Instanciar el objeto y asignarle la posición del objeto padre
             GameObject newObject = Instantiate(generator, new Vector3(spawnPosition.x, spawnPosition.y,spawnPosition.z + 750 * 30), Quaternion.identity);
 
-            if (newObject.GetComponent<CloacaGenerator>() != null)
+            AreaGenerator a = newObject.GetComponent<AreaGenerator>();
+            a.target = other.gameObject.transform;
+            other.transform.parent.
+            gameObject.GetComponent<Delimitator>().
+            UpdateLimits(new Vector2(-a.chunkSizeX * a.multiplier, a.chunkSizeX * a.multiplier * 2), new Vector2(0, a.altura), a.chunkSizeX * a.multiplier * 3);
+            other.transform.parent.gameObject.GetComponent<Delimitator>().needChange = true;
+
+            /*if (newObject.GetComponent<CloacaGenerator>() != null)
             {
                 newObject.GetComponent<CloacaGenerator>().target = other.gameObject.transform;
             }
@@ -64,8 +68,15 @@ public class PortalNewArea : MonoBehaviour
             }
             else if (newObject.GetComponent<VerticalGenerator>() != null)
             {
-                newObject.GetComponent<VerticalGenerator>().target = other.gameObject.transform;
-            }
+                VerticalGenerator vg = newObject.GetComponent<VerticalGenerator>();
+                vg.target = other.gameObject.transform;
+                vg.target = other.gameObject.transform;
+                Debug.Log("Altura: " + vg.altura);
+                other.transform.parent.
+                gameObject.GetComponent<Delimitator>().
+                UpdateLimits(new Vector2(-vg.chunkSizeX * vg.multiplier, vg.chunkSizeX * vg.multiplier * 2), new Vector2(0, vg.altura), vg.chunkSizeX * vg.multiplier * 3);
+                other.transform.parent.gameObject.GetComponent<Delimitator>().needChange = true;
+            }*/
 
             //newObject.GetComponent<AreaGenerator>().target = other.gameObject.transform;
             target = other.gameObject.transform;

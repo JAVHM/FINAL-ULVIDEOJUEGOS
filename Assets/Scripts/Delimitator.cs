@@ -16,14 +16,17 @@ public class Delimitator : MonoBehaviour
     void Update()
     {
         if(needChange && transform.position.z > changePointZ){
-            Xtemp = X;
-            Ytemp = Y;
+            X = Xtemp;
+            Y = Ytemp;
             needChange = false;
             Debug.Log("cambiado");
+            Debug.Log("X: " + Xtemp);
+            Debug.Log("Y: " + Ytemp);
         }
         Vector3 targetPosition = transform.position;
         if (targetPosition.y < Y.x - margin || targetPosition.y > Y.y + margin || targetPosition.x < X.x - margin || targetPosition.x > X.y + margin)
         {
+            Debug.Log("fuera de área");
             Destroy(this.gameObject);
         }
     }

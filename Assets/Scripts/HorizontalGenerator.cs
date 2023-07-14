@@ -18,11 +18,6 @@ public class HorizontalGenerator : AreaGenerator
     }
     void Update()
     {
-        /*Vector3 targetPosition = target.transform.position;
-        if (targetPosition.y < 0f || targetPosition.y > 2000f || targetPosition.x < - chunkSizeX * multiplier || targetPosition.x > chunkSizeX * multiplier * 2)
-        {
-            Destroy(target.gameObject);
-        }*/
 
         if ((target.position.z + (3200 * multiplier) > chunkSize * multiplier) && waitingGeneration)
         {
@@ -60,7 +55,7 @@ public class HorizontalGenerator : AreaGenerator
     }
 
 
-    public void CreateInferior()
+    public override void CreateInferior()
     {
         GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -76,8 +71,8 @@ public class HorizontalGenerator : AreaGenerator
         gd.GetComponent<Waves>().offSetY += (int)chunkSize;
         gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
     }
-    
-    private IEnumerator CreateInferiorCoroutine()
+
+    public override IEnumerator CreateInferiorCoroutine()
     {
         GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -97,7 +92,7 @@ public class HorizontalGenerator : AreaGenerator
         yield return new WaitForSeconds(.5f);
     }
 
-    public void CreateLaterals()
+    public override void CreateLaterals()
     {
         GameObject gi = Instantiate(lateral, new Vector3(-chunkSizeX * multiplier, chunkSizeX * multiplier / 2, chunkSize * multiplier), Quaternion.identity);
         gi.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -112,7 +107,7 @@ public class HorizontalGenerator : AreaGenerator
         gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
     }
 
-    private IEnumerator CreateLateralsCoroutine()
+    public override IEnumerator CreateLateralsCoroutine()
     {
         GameObject gi = Instantiate(lateral, new Vector3(-chunkSizeX * multiplier, chunkSizeX * multiplier / 2, chunkSize * multiplier), Quaternion.identity);
         gi.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -129,7 +124,7 @@ public class HorizontalGenerator : AreaGenerator
         yield return new WaitForSeconds(.3f);
     }
 
-    public void CreateSuperior()
+    public override void CreateSuperior()
     {
         GameObject gU = Instantiate(superior, new Vector3(0, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
         gU.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -149,7 +144,7 @@ public class HorizontalGenerator : AreaGenerator
         gUd.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
     }
 
-    private IEnumerator CreateSuperiorCoroutine()
+    public override IEnumerator CreateSuperiorCoroutine()
     {
         GameObject gU = Instantiate(superior, new Vector3(0, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
         gU.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -176,14 +171,14 @@ public class HorizontalGenerator : AreaGenerator
         waitingGeneration = true;
     }
 
-    public void InstantiatePortals()
+    public override void InstantiatePortals()
     {
         GameObject g = Instantiate(instPortal, new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         GameObject gi = Instantiate(instPortal, new Vector3(-chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         GameObject gd = Instantiate(instPortal, new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
     }
 
-    public void CreateInitialObstacles()
+    public override void CreateInitialObstacles()
     {
         int[] selectedRow = new int[3];
 
@@ -205,7 +200,7 @@ public class HorizontalGenerator : AreaGenerator
         }
     }
 
-    private IEnumerator CreateObstacles()
+    public override IEnumerator CreateObstacles()
     {
 
         int[] selectedRow = new int[3];

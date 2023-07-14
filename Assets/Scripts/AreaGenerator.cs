@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaGenerator : MonoBehaviour
+public abstract class AreaGenerator : MonoBehaviour
 {
     public Transform target; // Referencia al objeto "target"
     public GameObject inferior;
@@ -16,7 +16,7 @@ public class AreaGenerator : MonoBehaviour
     public float multiplier = 2;
     public Waves waves;
     public int actualRow = 0;
-    public int altura = 1500;
+    public int altura;
     public bool waitingGeneration = true;
 
     public int chance = 100;
@@ -71,81 +71,22 @@ public class AreaGenerator : MonoBehaviour
 
     public virtual void CreateInferior()
     {
-        GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
-        g.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        g.GetComponent<Waves>().offSetY += (int)chunkSize;
-
-        GameObject gi = Instantiate(inferior, new Vector3(-chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
-        gi.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gi.GetComponent<Waves>().offSetY += (int)chunkSize;
-        gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
-
-        GameObject gd = Instantiate(inferior, new Vector3(chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
-        gd.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gd.GetComponent<Waves>().offSetY += (int)chunkSize;
-        gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
+        
     }
 
-    private IEnumerator CreateInferiorCoroutine()
+    public virtual IEnumerator CreateInferiorCoroutine()
     {
-        GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
-        g.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        g.GetComponent<Waves>().offSetY += (int)chunkSize;
-        yield return new WaitForSeconds(.5f);
-
-        GameObject gi = Instantiate(inferior, new Vector3(-chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
-        gi.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gi.GetComponent<Waves>().offSetY += (int)chunkSize;
-        gi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
-        yield return new WaitForSeconds(.5f);
-
-        GameObject gd = Instantiate(inferior, new Vector3(chunkSizeX * multiplier, 0, chunkSize * multiplier), Quaternion.identity);
-        gd.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gd.GetComponent<Waves>().offSetY += (int)chunkSize;
-        gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
+        
         yield return new WaitForSeconds(.5f);
     }
 
-    public void CreateSuperior()
+    public virtual void CreateSuperior()
     {
-        GameObject gU = Instantiate(superior, new Vector3(0, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
-        gU.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gU.transform.rotation = Quaternion.Euler(-180, 0, 0);
-        gU.GetComponent<Waves>().offSetY -= (int)chunkSize;
-
-        GameObject gUi = Instantiate(superior, new Vector3(-chunkSizeX * multiplier, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
-        gUi.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gUi.transform.rotation = Quaternion.Euler(-180, 0, 0);
-        gUi.GetComponent<Waves>().offSetY -= (int)chunkSize;
-        gUi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
-
-        GameObject gUd = Instantiate(superior, new Vector3(chunkSizeX * multiplier, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
-        gUd.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gUd.transform.rotation = Quaternion.Euler(-180, 0, 0);
-        gUd.GetComponent<Waves>().offSetY -= (int)chunkSize;
-        gUd.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
+        
     }
 
-    private IEnumerator CreateSuperiorCoroutine()
+    public virtual IEnumerator CreateSuperiorCoroutine()
     {
-        GameObject gU = Instantiate(superior, new Vector3(0, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
-        gU.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gU.transform.rotation = Quaternion.Euler(-180, 0, 0);
-        gU.GetComponent<Waves>().offSetY -= (int)chunkSize;
-        yield return new WaitForSeconds(.5f);
-
-        GameObject gUi = Instantiate(superior, new Vector3(-chunkSizeX * multiplier, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
-        gUi.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gUi.transform.rotation = Quaternion.Euler(-180, 0, 0);
-        gUi.GetComponent<Waves>().offSetY -= (int)chunkSize;
-        gUi.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
-        yield return new WaitForSeconds(.5f);
-
-        GameObject gUd = Instantiate(superior, new Vector3(chunkSizeX * multiplier, altura, chunkSize * multiplier + chunkSizeX * multiplier), Quaternion.identity);
-        gUd.transform.localScale = new Vector3(multiplier, 1, multiplier);
-        gUd.transform.rotation = Quaternion.Euler(-180, 0, 0);
-        gUd.GetComponent<Waves>().offSetY -= (int)chunkSize;
-        gUd.GetComponent<Waves>().offSetX -= (int)chunkSizeX;
         yield return new WaitForSeconds(.5f);
 
         chunkSize += 250;
@@ -153,14 +94,22 @@ public class AreaGenerator : MonoBehaviour
         waitingGeneration = true;
     }
 
-    public void InstantiatePortals()
+    public virtual void InstantiatePortals()
     {
-        GameObject g = Instantiate(instPortal, new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
-        GameObject gi = Instantiate(instPortal, new Vector3(-chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
-        GameObject gd = Instantiate(instPortal, new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+        
     }
 
-    public void CreateInitialObstacles()
+    public virtual void CreateLaterals()
+    {
+        
+    }
+
+    public virtual IEnumerator CreateLateralsCoroutine()
+    {
+        yield return new WaitForSeconds(.5f);
+    }
+
+    public virtual void CreateInitialObstacles()
     {
         int[] selectedRow = new int[3];
 
@@ -182,7 +131,7 @@ public class AreaGenerator : MonoBehaviour
         }
     }
 
-    private IEnumerator CreateObstacles()
+    public virtual IEnumerator CreateObstacles()
     {
 
         int[] selectedRow = new int[3];
@@ -206,5 +155,10 @@ public class AreaGenerator : MonoBehaviour
             GameObject gd = Instantiate(gameObjectsArray[Random.Range(0, gameObjectsArray.Length)], new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         }
         yield return new WaitForSeconds(.5f);
+    }
+
+    public virtual void CreateEntrance()
+    {
+
     }
 }

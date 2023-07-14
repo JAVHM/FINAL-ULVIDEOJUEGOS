@@ -46,14 +46,14 @@ public class CloacaGenerator : AreaGenerator
     }
 
 
-    public virtual void CreateInferior()
+    public override void CreateInferior()
     {
         GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
         g.GetComponent<Waves>().offSetY += (int)chunkSize;
     }
 
-    private IEnumerator CreateInferiorCoroutine()
+    public override IEnumerator CreateInferiorCoroutine()
     {
         GameObject g = Instantiate(inferior, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
@@ -66,12 +66,12 @@ public class CloacaGenerator : AreaGenerator
     }
 
 
-    public void InstantiatePortals()
+    public override void InstantiatePortals()
     {
         GameObject g = Instantiate(instPortal, new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
     }
 
-    public void CreateInitialObstacles()
+    public override void CreateInitialObstacles()
     {
         int[] selectedRow = new int[3];
 
@@ -83,7 +83,7 @@ public class CloacaGenerator : AreaGenerator
         }
     }
 
-    private IEnumerator CreateObstacles()
+    public override IEnumerator CreateObstacles()
     {
 
         int[] selectedRow = new int[3];
@@ -97,7 +97,7 @@ public class CloacaGenerator : AreaGenerator
         yield return new WaitForSeconds(.5f);
     }
 
-    public virtual void CreateEntrance()
+    public override void CreateEntrance()
     {
         GameObject g = Instantiate(Entrance, new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
