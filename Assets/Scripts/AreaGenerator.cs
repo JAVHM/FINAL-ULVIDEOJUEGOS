@@ -161,4 +161,9 @@ public abstract class AreaGenerator : MonoBehaviour
     {
 
     }
+
+    public virtual IEnumerator CreateEndCoroutine()
+    {
+        yield return new WaitForSeconds(.5f);
+    }
 }

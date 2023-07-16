@@ -36,22 +36,7 @@ public class VerticalGenerator : AreaGenerator
 
             if (chunckCount > chuncksPerArea)
             {
-                InstantiatePortals();
-                CreateInferior();
-                CreateLaterals();
-                CreateSuperior();
-
-                chunkSize += 250;
-                CreateInferior();
-                CreateLaterals();
-                CreateSuperior();
-
-                chunkSize += 250;
-                CreateInferior();
-                CreateLaterals();
-                CreateSuperior();
-
-                Destroy(this.gameObject);
+                StartCoroutine(CreateEndCoroutine());
             }
         }
     }
@@ -214,5 +199,26 @@ public class VerticalGenerator : AreaGenerator
         gd.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 90));
         gd.GetComponent<Waves>().offSetY += (int)chunkSize;
         gd.GetComponent<Waves>().offSetX += (int)chunkSizeX;
+    }
+
+    public override IEnumerator CreateEndCoroutine()
+    {
+        InstantiatePortals();
+        yield return new WaitForSeconds(.4f);
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        chunkSize += 250;
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        chunkSize += 250;
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        Destroy(this.gameObject);
     }
 }

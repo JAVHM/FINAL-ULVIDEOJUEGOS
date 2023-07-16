@@ -103,4 +103,25 @@ public class CloacaGenerator : AreaGenerator
         g.transform.localScale = new Vector3(multiplier, 1, multiplier);
         g.GetComponent<Waves>().offSetY += (int)chunkSize;
     }
+
+    public override IEnumerator CreateEndCoroutine()
+    {
+        InstantiatePortals();
+        yield return new WaitForSeconds(.4f);
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        chunkSize += 250;
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        chunkSize += 250;
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        Destroy(this.gameObject);
+    }
 }

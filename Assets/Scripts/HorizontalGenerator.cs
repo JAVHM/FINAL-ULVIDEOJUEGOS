@@ -34,22 +34,7 @@ public class HorizontalGenerator : AreaGenerator
 
             if (chunckCount > chuncksPerArea)
             {
-                InstantiatePortals();
-                CreateInferior();
-                CreateLaterals();
-                CreateSuperior();
-
-                chunkSize += 250;
-                CreateInferior();
-                CreateLaterals();
-                CreateSuperior();
-
-                chunkSize += 250;
-                CreateInferior();
-                CreateLaterals();
-                CreateSuperior();
-
-                Destroy(this.gameObject);
+                StartCoroutine(CreateEndCoroutine());
             }
         }
     }
@@ -224,5 +209,26 @@ public class HorizontalGenerator : AreaGenerator
             GameObject gd = Instantiate(gameObjectsArray[Random.Range(0, gameObjectsArray.Length)], new Vector3(chunkSizeX * multiplier * 1.5f, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
         }
         yield return new WaitForSeconds(.5f);
+    }
+
+    public override IEnumerator CreateEndCoroutine()
+    {
+        InstantiatePortals();
+        yield return new WaitForSeconds(.4f);
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        chunkSize += 250;
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        chunkSize += 250;
+        CreateInferior(); yield return new WaitForSeconds(.4f);
+        CreateLaterals(); yield return new WaitForSeconds(.4f);
+        CreateSuperior(); yield return new WaitForSeconds(.4f);
+
+        Destroy(this.gameObject);
     }
 }
