@@ -110,17 +110,14 @@ public class CloacaGenerator : AreaGenerator
         yield return new WaitForSeconds(.4f);
         CreateInferior(); yield return new WaitForSeconds(.4f);
         CreateLaterals(); yield return new WaitForSeconds(.4f);
-        CreateSuperior(); yield return new WaitForSeconds(.4f);
 
         chunkSize += 250;
         CreateInferior(); yield return new WaitForSeconds(.4f);
         CreateLaterals(); yield return new WaitForSeconds(.4f);
-        CreateSuperior(); yield return new WaitForSeconds(.4f);
 
         chunkSize += 250;
         CreateInferior(); yield return new WaitForSeconds(.4f);
         CreateLaterals(); yield return new WaitForSeconds(.4f);
-        CreateSuperior(); yield return new WaitForSeconds(.4f);
 
         Destroy(this.gameObject);
     }
