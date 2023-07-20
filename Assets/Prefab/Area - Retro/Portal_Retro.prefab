@@ -114,7 +114,11 @@ MonoBehaviour:
   generator: {fileID: 0}
   target: {fileID: 0}
   colorOG: {r: 0, g: 0, b: 0, a: 0}
-  colorMayor500: {r: 0, g: 0, b: 0, a: 0}
+  dls: {fileID: 0}
+  dli: {fileID: 0}
+  dlsColor: {r: 0, g: 0, b: 0, a: 0}
+  dliColor: {r: 0, g: 0, b: 0, a: 0}
+  areaSO: {fileID: 0}
 --- !u!1 &3606792633469556823
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,8 +147,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3606792633469556823}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 750, z: -3750}
-  m_LocalScale: {x: 7500, y: 30, z: 3000}
+  m_LocalPosition: {x: 0, y: 2400, z: -3750}
+  m_LocalScale: {x: 7500, y: 30, z: 6448.964}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8455252277561594206}
@@ -228,7 +232,11 @@ MonoBehaviour:
   generator: {fileID: 5015706939080574023, guid: 1b8208e021cc4d843ae42356baacc1e5, type: 3}
   target: {fileID: 0}
   colorOG: {r: 0, g: 0, b: 0, a: 0}
-  colorMayor500: {r: 0.9137255, g: 0.13333331, b: 0.16211903, a: 1}
+  dls: {fileID: 0}
+  dli: {fileID: 0}
+  dlsColor: {r: 0, g: 0, b: 0, a: 0}
+  dliColor: {r: 0, g: 0, b: 0, a: 0}
+  areaSO: {fileID: 0}
 --- !u!1 &8455252277561594201
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8455252277561594206}
   m_Layer: 0
-  m_Name: Portal_Cloaca
+  m_Name: Portal_Retro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
