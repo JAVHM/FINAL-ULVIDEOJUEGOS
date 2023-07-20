@@ -4,6 +4,7 @@
 //
 
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace MFlight.Demo
 {
@@ -47,10 +48,15 @@ namespace MFlight.Demo
         public float accelerationTime = 4f;
         public float currentSpeed;// Velocidad actual de la nave
         private float timeElapsed;
+        private PlayerShooter playerShooter;
+
+        [Header("Postprocesado")]
+        public PostProcesado postProcess;
 
         private void Awake()
         {
             rigid = GetComponent<Rigidbody>();
+            playerShooter = GetComponent<PlayerShooter>();
 
             if (controller == null)
                 Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
@@ -60,13 +66,17 @@ namespace MFlight.Demo
         {
             if (Input.GetKey(KeyCode.Space))
             {
+                postProcess.elTurbo = true;
                 currentSpeed = Mathf.SmoothStep(currentSpeed, velocidadMovimientoMax, timeElapsed / accelerationTime);
+                playerShooter.force = Mathf.SmoothStep(playerShooter.maxForce, playerShooter.maxForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
             }
             else
             {
                 // Restablecer gradualmente la velocidad a la velocidad normal en 2 segundos
+                postProcess.elTurbo = false;
                 currentSpeed = Mathf.SmoothStep(currentSpeed, thrust, timeElapsed / accelerationTime);
+                playerShooter.force = Mathf.SmoothStep(playerShooter.minForce, playerShooter.minForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
             }
 
