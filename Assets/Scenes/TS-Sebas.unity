@@ -1062,40 +1062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeneratorDeepOcean
       objectReference: {fileID: 0}
-    - target: {fileID: 3183367593136123881, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1782183816}
     - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1782183816}
-    - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: chuncksPerArea
-      value: 999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: gameObjectsArray.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: gameObjectsArray.Array.data[0]
-      value: 
-      objectReference: {fileID: 7374706046114964017, guid: 48e363b4b7919bd4791ee2ed1376cab9, type: 3}
-    - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: gameObjectsArray.Array.data[1]
-      value: 
-      objectReference: {fileID: 7667101005593571870, guid: 8a8aee82443a2db4690abc13b4f4ffa1, type: 3}
-    - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: gameObjectsArray.Array.data[2]
-      value: 
-      objectReference: {fileID: 7374706046114964017, guid: 48e363b4b7919bd4791ee2ed1376cab9, type: 3}
-    - target: {fileID: 4241406000299878109, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
-      propertyPath: gameObjectsArray.Array.data[3]
-      value: 
-      objectReference: {fileID: 7667101005593571870, guid: 8a8aee82443a2db4690abc13b4f4ffa1, type: 3}
-    m_RemovedComponents:
-    - {fileID: 3183367593136123881, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb191b9a613c2b946b3b93b0006ceb48, type: 3}
 --- !u!1001 &1020786299
 PrefabInstance:
