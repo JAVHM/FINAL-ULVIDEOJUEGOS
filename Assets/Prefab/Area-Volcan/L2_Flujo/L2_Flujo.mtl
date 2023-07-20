@@ -1,0 +1,9 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl bricksDark(Clone)
+Kd 0.924 0.155 0.155
+map_Kd Textures/bricksDark(Clone).png
+
+newmtl stoneDark(Clone)
+Kd 0.096 0.096 0.103
+
