@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Delimitator : MonoBehaviour
 {
@@ -27,7 +28,12 @@ public class Delimitator : MonoBehaviour
         if (targetPosition.y < Y.x - margin || targetPosition.y > Y.y + margin || targetPosition.x < X.x - margin || targetPosition.x > X.y + margin)
         {
             Debug.Log("fuera de área");
-            Destroy(this.gameObject);
+            // Get the index of the current scene
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            // Reload the current scene by loading it again
+            SceneManager.LoadScene(currentSceneIndex);
+            //Destroy(this.gameObject);
         }
     }
 
