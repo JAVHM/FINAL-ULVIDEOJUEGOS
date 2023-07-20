@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.UIElements;
 
 public class PortalNewArea : MonoBehaviour
@@ -10,7 +12,13 @@ public class PortalNewArea : MonoBehaviour
 
     public Transform target; // Objeto de referencia para calcular la distancia
     public Color colorOG; // Color cuando la distancia es 0
-    public Color colorMayor500; // Color cuando la distancia es mayor a 500 en el eje Z
+
+    public Light dls;
+    public Light dli;
+    public Color dlsColor;
+    public Color dliColor;
+
+    public AreaSO areaSO;
 
 
     private void Update()
@@ -24,7 +32,10 @@ public class PortalNewArea : MonoBehaviour
             float interpolacion = Mathf.Clamp01(distancia / (750 * 30));
 
             // Realiza la mezcla de colores utilizando la interpolación
-            Color colorMezclado = Color.Lerp(colorOG, colorMayor500, interpolacion);
+            Color colorMezclado = Color.Lerp(colorOG, areaSO.fogColor, interpolacion);
+
+            Color colorMezcladoDLS = Color.Lerp(dlsColor, areaSO.superiorColor, interpolacion);
+            Color colorMezcladoDLI = Color.Lerp(dliColor, areaSO.inferiorColor, interpolacion);
 
             Camera.main.gameObject.GetComponent<Fog>().fogColor = colorMezclado;
 
@@ -53,31 +64,6 @@ public class PortalNewArea : MonoBehaviour
             UpdateLimits(new Vector2(-a.chunkSizeX * a.multiplier, a.chunkSizeX * a.multiplier * 2), new Vector2(0, a.altura), a.chunkSizeX * a.multiplier * 3);
             other.transform.parent.gameObject.GetComponent<Delimitator>().needChange = true;
 
-            /*if (newObject.GetComponent<CloacaGenerator>() != null)
-            {
-                newObject.GetComponent<CloacaGenerator>().target = other.gameObject.transform;
-            }
-            else if (newObject.GetComponent<HorizontalGenerator>() != null)
-            {
-                HorizontalGenerator hg  = newObject.GetComponent<HorizontalGenerator>();
-                hg.target = other.gameObject.transform;
-                other.transform.parent.
-                gameObject.GetComponent<Delimitator>().
-                UpdateLimits(new Vector2(- hg.chunkSizeX * hg.multiplier, hg.chunkSizeX * hg.multiplier * 2), new Vector2(0, hg.altura), hg.chunkSizeX * hg.multiplier * 3);
-                other.transform.parent.gameObject.GetComponent<Delimitator>().needChange = true;
-            }
-            else if (newObject.GetComponent<VerticalGenerator>() != null)
-            {
-                VerticalGenerator vg = newObject.GetComponent<VerticalGenerator>();
-                vg.target = other.gameObject.transform;
-                vg.target = other.gameObject.transform;
-                Debug.Log("Altura: " + vg.altura);
-                other.transform.parent.
-                gameObject.GetComponent<Delimitator>().
-                UpdateLimits(new Vector2(-vg.chunkSizeX * vg.multiplier, vg.chunkSizeX * vg.multiplier * 2), new Vector2(0, vg.altura), vg.chunkSizeX * vg.multiplier * 3);
-                other.transform.parent.gameObject.GetComponent<Delimitator>().needChange = true;
-            }*/
-
             //newObject.GetComponent<AreaGenerator>().target = other.gameObject.transform;
             target = other.gameObject.transform;
             colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor;
@@ -86,10 +72,27 @@ public class PortalNewArea : MonoBehaviour
 
     private IEnumerator ChangeColorCoroutine()
     {
+        if(areaSO.hasFog == false)
+        {
+            Camera.main.gameObject.GetComponent<Fog>().enabled = false;
+        }
+        else
+        {
+            Camera.main.gameObject.GetComponent<Fog>().enabled = true;
+        }
         float elapsedTime = 0f;
+
+        dls = GameObject.Find("SuperiorDL").GetComponent<Light>();
+        dli = GameObject.Find("InferiorDL").GetComponent<Light>();
 
         Color initial = Camera.main.gameObject.GetComponent<Fog>().fogColor;
         Color currentColor = initial;
+
+        Color initialDLS = dls.color;
+        Color currentColorDLS = initialDLS;
+
+        Color initialDLI = dli.color;
+        Color currentColorDLI = initialDLI;
 
         while (elapsedTime < 2)
         {
@@ -97,16 +100,33 @@ public class PortalNewArea : MonoBehaviour
             float t = elapsedTime / 2;
 
             // Interpolate the color between startColor and targetColor
-            currentColor = Color.Lerp(initial, colorMayor500, t);
+            currentColor = Color.Lerp(initial, areaSO.fogColor, t);
+            currentColor = Color.Lerp(initial, areaSO.fogColor, t);
 
             // Apply the color to the object
             colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor = currentColor;
+
+            // Interpolate the color between startColor and targetColor
+            currentColorDLS = Color.Lerp(initialDLS, areaSO.superiorColor, t);
+            currentColorDLS = Color.Lerp(initialDLS, areaSO.superiorColor, t);
+
+            // Apply the color to the object
+            dlsColor = dls.color = currentColorDLS;
+
+            // Interpolate the color between startColor and targetColor
+            currentColorDLI = Color.Lerp(initialDLI, areaSO.inferiorColor, t);
+            currentColorDLI = Color.Lerp(initialDLI, areaSO.inferiorColor, t);
+
+            // Apply the color to the object
+            dliColor = dli.color = currentColorDLI;
 
             yield return null;
         }
 
         // Ensure the final color is exactly the targetColor
-        colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor = colorMayor500;
+        colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor = areaSO.fogColor;
+        dlsColor = dls.color = areaSO.superiorColor;
+        dliColor = dli.color = areaSO.inferiorColor;
         Destroy(this.gameObject);
     }
 }

@@ -113,7 +113,11 @@ MonoBehaviour:
   generator: {fileID: 1730903857925385181, guid: 650532426bf460c42b49b09f55b392ad, type: 3}
   target: {fileID: 0}
   colorOG: {r: 0, g: 0, b: 0, a: 0}
-  colorMayor500: {r: 0.03137255, g: 0.003921569, b: 0.101960786, a: 1}
+  dls: {fileID: 0}
+  dli: {fileID: 0}
+  dlsColor: {r: 0, g: 0, b: 0, a: 0}
+  dliColor: {r: 0, g: 0, b: 0, a: 0}
+  areaSO: {fileID: 11400000, guid: 91deee0ec50fca842a0ba12589bdde51, type: 2}
 --- !u!1 &1932038682438042474
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +232,11 @@ MonoBehaviour:
   generator: {fileID: 0}
   target: {fileID: 0}
   colorOG: {r: 0, g: 0, b: 0, a: 0}
-  colorMayor500: {r: 0, g: 0, b: 0, a: 0}
+  dls: {fileID: 0}
+  dli: {fileID: 0}
+  dlsColor: {r: 0, g: 0, b: 0, a: 0}
+  dliColor: {r: 0, g: 0, b: 0, a: 0}
+  areaSO: {fileID: 0}
 --- !u!1 &5290445676181997236
 GameObject:
   m_ObjectHideFlags: 0

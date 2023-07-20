@@ -48,7 +48,7 @@ MonoBehaviour:
   inferior: {fileID: 2762442456592139939, guid: 5ab4a2d9cfa0da743a44a8edd648c6ad, type: 3}
   superior: {fileID: 7063971540184108073, guid: 0942c9835b41f6749a0842e6e7c00132, type: 3}
   lateral: {fileID: 8874689272248425156, guid: 8b6e6474ef2ac1349990bee43fbf942e, type: 3}
-  instPortal: {fileID: 5290445676635617347, guid: 3b394927d3cb21d48ae6e31558873dfe, type: 3}
+  instPortal: {fileID: 515715476522359549, guid: dc0e7948e9600c8498f434bf568c740d, type: 3}
   chunkSize: 0
   chunkSizeX: 250
   chuncksPerArea: 10
