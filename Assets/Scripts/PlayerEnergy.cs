@@ -9,6 +9,7 @@ public class PlayerEnergy : MonoBehaviour
     public float currentEnergy;   // Energía actual del avión
 
     public Slider energySlider;   // Referencia al Slider UI
+    public float multiplier;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class PlayerEnergy : MonoBehaviour
     void Update()
     {
         // Reducir la energía del avión con el tiempo
-        currentEnergy -= Time.deltaTime;
+        currentEnergy -= Time.deltaTime * multiplier;
 
         // Asegurarse de que la energía nunca sea negativa
         currentEnergy = Mathf.Max(currentEnergy, 0f);
@@ -31,5 +32,12 @@ public class PlayerEnergy : MonoBehaviour
     {
         // Actualizar el valor del Slider UI
         energySlider.value = currentEnergy / maxEnergy;
+    }
+
+    public void GetEnergy(int e)
+    {
+        currentEnergy += e;
+        if (currentEnergy >= maxEnergy)
+            currentEnergy = maxEnergy;
     }
 }
