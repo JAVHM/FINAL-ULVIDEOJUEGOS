@@ -113,7 +113,7 @@ MonoBehaviour:
   player: {fileID: 0}
   detectionDistance: 999999
   blockingDistance: 10
-  movementSpeed: 1000
+  movementSpeed: 1500
   health: 1
   looseAmount: -20
   floatingText: {fileID: 7565197091839033326, guid: 0a13549973d349740a02925f278d068e, type: 3}
