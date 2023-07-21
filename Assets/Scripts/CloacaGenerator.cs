@@ -92,7 +92,8 @@ public class CloacaGenerator : AreaGenerator
 
         if (rand < chance)
         {
-            GameObject g = Instantiate(gameObjectsArray[Random.Range(0, gameObjectsArray.Length)], new Vector3(chunkSizeX * multiplier / 2, 0, chunkSize * multiplier + (chunkSizeX * multiplier / 2)), Quaternion.identity);
+            GameObject g = Instantiate(gameObjectsArray[Random.Range(0, gameObjectsArray.Length)], new Vector3(0, 0, chunkSize * multiplier), Quaternion.identity);
+            //g.transform.localScale = new Vector3(multiplier, 1, multiplier);
         }
         yield return new WaitForSeconds(.5f);
     }
