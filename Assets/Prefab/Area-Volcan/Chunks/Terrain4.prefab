@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_Geiser (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}
 --- !u!4 &2834298322748653595 stripped
@@ -602,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_Geiser (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}
 --- !u!1 &2525932515306826609 stripped
@@ -706,6 +714,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}
       propertyPath: m_Name
       value: L2_Geiser
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e6542a6180da2b4bbfbbdb85a44fe47, type: 3}

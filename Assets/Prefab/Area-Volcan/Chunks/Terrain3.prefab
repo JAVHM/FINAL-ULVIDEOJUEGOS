@@ -499,6 +499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_Flujo (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
 --- !u!1 &373867375845151576 stripped
@@ -590,6 +594,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
       propertyPath: m_Name
       value: L2_Flujo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
@@ -683,6 +691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_Flujo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
 --- !u!1 &1492892193484803351 stripped
@@ -775,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_Flujo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
 --- !u!1 &3997752913614067981 stripped
@@ -866,6 +882,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
       propertyPath: m_Name
       value: L2_Flujo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf86b10af962fee4d9eb97f705ee7a84, type: 3}

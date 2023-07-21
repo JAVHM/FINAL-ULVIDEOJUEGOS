@@ -505,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_BurbujaLava (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
 --- !u!4 &1222973119914098791 stripped
@@ -596,6 +600,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
       propertyPath: m_Name
       value: L2_BurbujaLava (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
@@ -689,6 +697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_BurbujaLava (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
 --- !u!4 &2526585310801237408 stripped
@@ -780,6 +792,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
       propertyPath: m_Name
       value: L2_BurbujaLava (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
@@ -873,6 +889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_BurbujaLava (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
 --- !u!1 &2617773643444599351 stripped
@@ -964,6 +984,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
       propertyPath: m_Name
       value: L2_BurbujaLava (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
@@ -1057,6 +1081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_BurbujaLava (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
 --- !u!1 &3917549604859133851 stripped
@@ -1148,6 +1176,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
       propertyPath: m_Name
       value: L2_BurbujaLava (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
@@ -1241,6 +1273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_BurbujaLava (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
 --- !u!4 &7225632888296139178 stripped
@@ -1333,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2_BurbujaLava (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
 --- !u!1 &7048469215679096914 stripped
@@ -1424,6 +1464,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
       propertyPath: m_Name
       value: L2_BurbujaLava
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecfffa1d224d714b93111043d27a467, type: 3}
