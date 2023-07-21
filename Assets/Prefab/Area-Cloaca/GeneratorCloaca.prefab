@@ -62,5 +62,6 @@ MonoBehaviour:
   gameObjectsArray:
   - {fileID: 981440276835437871, guid: 2ee9c277410fef54087019ebbc71f0a6, type: 3}
   - {fileID: 2381241459557563179, guid: e0f5bfb572fdd364eafad3b25ab93ff8, type: 3}
+  - {fileID: 2381241459557563179, guid: 5f3a68f0c6101014bb35b5040c6352f6, type: 3}
   temp: 0
   Entrance: {fileID: 2907652873796939967, guid: 948390c98bd2973409fcf1072505417d, type: 3}
