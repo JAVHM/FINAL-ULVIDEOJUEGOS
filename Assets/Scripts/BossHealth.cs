@@ -6,6 +6,7 @@ public class BossHealth : MonoBehaviour
 {
     public int health;
     public bool temp = true;
+    
     void Start()
     {
     }
@@ -22,8 +23,7 @@ public class BossHealth : MonoBehaviour
             health -= 1;
             if (health <= 0)
             {
-                Debug.Log("AAAAAAAAAA");
-                Destroy(this.gameObject);
+                //StartCoroutine();
             }
         }
     }

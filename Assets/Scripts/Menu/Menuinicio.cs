@@ -5,6 +5,13 @@ using UnityEngine;
 public class Menuinicio : MonoBehaviour
 {
     public float rotationSpeed = 30f; // Velocidad de rotación en grados por segundo
+    public AudioSource audioS;
+
+    private void Start()
+    {
+        audioS= GetComponent<AudioSource>();
+        audioS.Play();
+    }
 
     // Update is called once per frame
     void Update()

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Variaci\xF3n1.unity"
     guid: cf15e35bb1a54d249b26288be8281917
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 9f9a3871005f0444eaaf7a18f670a03a
   m_configObjects: {}
