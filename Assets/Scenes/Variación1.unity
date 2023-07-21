@@ -1798,6 +1798,12 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: redsea
+    clip: {fileID: 8300000, guid: eaf18fc6c463a484bb6bdbd06370a4c4, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   sounds:
   - name: disparo
     clip: {fileID: 8300000, guid: 1c76d94abd108ab4583c0206e5516234, type: 3}
@@ -1843,6 +1849,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: pickup
     clip: {fileID: 8300000, guid: aec6ca291f522984496fa5d68f3c0454, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: diaredsea
+    clip: {fileID: 8300000, guid: 484dc74c9bf982142a5518e5c0249abb, type: 3}
     volume: 0.7
     pitch: 1
     loop: 0

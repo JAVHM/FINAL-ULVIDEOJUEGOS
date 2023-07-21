@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float destroyDelay = 2f;
+    private float destroyDelay = 4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +15,6 @@ public class Bullet : MonoBehaviour
         Debug.Log("Destruido");
         // Autodestruir el GameObject cuando colisiona con cualquier otro objeto
         Destroy(gameObject);
+
     }
 }
