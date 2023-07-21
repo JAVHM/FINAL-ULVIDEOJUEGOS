@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8489707306113815326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8489707306113815523}
+  - component: {fileID: 3631633628499969644}
+  m_Layer: 0
+  m_Name: GeneratorRedSea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8489707306113815523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489707306113815326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3631633628499969644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489707306113815326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e6ef4aa4b62a64db402dc23d3093b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  inferior: {fileID: 3650170761953652648, guid: 1f8f03f17c383b742b239de01a9d75ca, type: 3}
+  superior: {fileID: 4270982207342007800, guid: 528223a22c95bbd4ba692ebdbffb8937, type: 3}
+  lateral: {fileID: 2434784411416633216, guid: 67fb450797ae78044a235402b27e5fcd, type: 3}
+  instPortal: {fileID: 7829753972771283583, guid: a9ea11db26589394892fae29dccfee1c, type: 3}
+  chunkSize: 0
+  chunkSizeX: 250
+  chuncksPerArea: 15
+  chunckCount: 1
+  multiplier: 30
+  waves: {fileID: 0}
+  actualRow: 0
+  altura: 3000
+  waitingGeneration: 1
+  chance: 100
+  gameObjectsArray:
+  - {fileID: 8003964305272845513, guid: 982f07b00a99ac14b980b30eb60b49a1, type: 3}
+  - {fileID: 4178167169430620488, guid: c7e4fae2887f7274daca40b6e4c4906a, type: 3}
+  - {fileID: 8770582287018696353, guid: 15ba97b124dadfd44b1cc598f435b4ae, type: 3}
+  - {fileID: 1176930273031543267, guid: 10db64aed2c4d954ba02a8d45b39c15b, type: 3}
+  temp: 0

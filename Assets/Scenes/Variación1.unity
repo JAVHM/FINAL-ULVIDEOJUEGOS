@@ -1327,7 +1327,7 @@ MonoBehaviour:
   postProcessVolume: {fileID: 0}
   intensity: 0
   intensityBase: 0
-  minIntensity: -65
+  minIntensity: -30
   accelerationTime: 4
   elTurbo: 0
 --- !u!114 &755257433

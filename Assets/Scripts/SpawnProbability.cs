@@ -15,6 +15,7 @@ public class SpawnProbability : MonoBehaviour
         // Comprobar si el número aleatorio es menor que la probabilidad definida
         if (randomValue < probability)
         {
+            Debug.Log("Destroy");
             Destroy(gameObject); // Destruir el objeto actual
         }
     }
