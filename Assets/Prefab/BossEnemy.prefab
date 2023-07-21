@@ -117,3 +117,4 @@ MonoBehaviour:
   health: 1
   looseAmount: -20
   floatingText: {fileID: 7565197091839033326, guid: 0a13549973d349740a02925f278d068e, type: 3}
+  battery: {fileID: 2267336217466030726, guid: 3b182ca23c19f36438fe4cb3647ef45a, type: 3}

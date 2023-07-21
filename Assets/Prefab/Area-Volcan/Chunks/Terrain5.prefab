@@ -446,6 +446,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5429628074537733249}
     m_Modifications:
+    - target: {fileID: 606905395790625493, guid: 3b182ca23c19f36438fe4cb3647ef45a, type: 3}
+      propertyPath: probability
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2267336217466030726, guid: 3b182ca23c19f36438fe4cb3647ef45a, type: 3}
       propertyPath: m_Name
       value: Battery

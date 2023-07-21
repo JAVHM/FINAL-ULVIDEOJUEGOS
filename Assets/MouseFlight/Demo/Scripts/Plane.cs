@@ -72,7 +72,7 @@ namespace MFlight.Demo
                 currentSpeed = Mathf.SmoothStep(currentSpeed, velocidadMovimientoMax, timeElapsed / accelerationTime);
                 playerShooter.force = Mathf.SmoothStep(playerShooter.maxForce, playerShooter.maxForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
-                playerEnergy.multiplier = 3;
+                playerEnergy.multiplier = 0.8f;
                 AudioManager.instance.Play("turbo");
             }
             else
@@ -82,7 +82,7 @@ namespace MFlight.Demo
                 currentSpeed = Mathf.SmoothStep(currentSpeed, thrust, timeElapsed / accelerationTime);
                 playerShooter.force = Mathf.SmoothStep(playerShooter.minForce, playerShooter.minForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
-                playerEnergy.multiplier = 1;
+                playerEnergy.multiplier = 0.1f;
             }
 
             // When the player commands their own stick input, it should override what the

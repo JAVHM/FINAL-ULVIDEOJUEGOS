@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 886200133}
     - target: {fileID: 1509154690, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: chuncksPerArea
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5167696249173477901, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_RootOrder
@@ -1685,7 +1685,7 @@ MonoBehaviour:
   maxEnergy: 100
   currentEnergy: 100
   energySlider: {fileID: 291760587}
-  multiplier: 1
+  multiplier: 0.1
 --- !u!1 &1152144151
 GameObject:
   m_ObjectHideFlags: 0

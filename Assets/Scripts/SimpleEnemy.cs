@@ -61,6 +61,7 @@ public class SimpleEnemy : MonoBehaviour
     bool temp = true;
     public int looseAmount;
     public GameObject floatingText;
+    public GameObject battery;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && temp)
@@ -78,6 +79,7 @@ public class SimpleEnemy : MonoBehaviour
                 Debug.Log("AAAAAAAAAA");
                 var t = Instantiate(floatingText, other.gameObject.transform.position, Quaternion.identity);
                 t.GetComponent<TextMeshPro>().text = health.ToString();
+                GameObject bat = Instantiate(battery, this.gameObject.transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
             } 
         }
