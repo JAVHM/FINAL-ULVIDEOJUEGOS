@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4a4c3551278dcd4ab4523e866de4055
+guid: 69c46dd933729674095d783157e665e6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: foliage_x0028_Clone_x0029_
-    second: {fileID: 2100000, guid: 46d7a70a48e26014c8cf5255c0625325, type: 2}
+    second: {fileID: 2100000, guid: 13420bb597b27ce4db509d378cbd69b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
