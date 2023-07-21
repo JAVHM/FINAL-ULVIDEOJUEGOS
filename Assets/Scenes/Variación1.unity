@@ -1776,6 +1776,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: turbo
+    clip: {fileID: 8300000, guid: 1b3cbae6e35fe9b4ebb6ccbd7b3e278c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1171100753
 Transform:
   m_ObjectHideFlags: 0
