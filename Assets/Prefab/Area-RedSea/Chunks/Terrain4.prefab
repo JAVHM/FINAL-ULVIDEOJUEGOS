@@ -1582,6 +1582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 197422903992539830, guid: 4e1aef962cac51a4fa7f88acb531d9eb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 197422903992539834, guid: 4e1aef962cac51a4fa7f88acb531d9eb, type: 3}
       propertyPath: m_RootOrder
       value: 20

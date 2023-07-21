@@ -107,6 +107,8 @@ GameObject:
   m_Component:
   - component: {fileID: 896061016635191550}
   - component: {fileID: 896061016635191549}
+  - component: {fileID: 84610943945269425}
+  - component: {fileID: 8683082090011064317}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -149,6 +151,32 @@ MonoBehaviour:
   maxSpeed: -5000
   minSpeed: -100
   defaultSpeed: -2500
+--- !u!114 &84610943945269425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896061016635191551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f82625e62243dc429b212af039eed4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+--- !u!135 &8683082090011064317
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896061016635191551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 525.8
+  m_Center: {x: 132.6821, y: -325.6235, z: 1109.091}
 --- !u!1 &896061016800142150
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +480,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896061017034641121}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
