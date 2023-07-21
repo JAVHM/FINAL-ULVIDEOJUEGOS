@@ -54,6 +54,6 @@ public class ScriptEstrella : MonoBehaviour
     void MoverEnLineaRecta()
     {
         // Mueve el objeto en línea recta después de dejar de seguir al jugador
-        transform.Translate(Vector3.right * velocidadRecta * Time.deltaTime);
+        transform.Translate(Vector3.forward * velocidadRecta * Time.deltaTime);
     }
 }

@@ -10,18 +10,16 @@ public class GestorMisiles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Probabilidades();
+        StartCoroutine(Probabilidades());
     }
 
-    private void Probabilidades()
+    private IEnumerator Probabilidades()
     {
-        Instantiate(estrellaTeledirigida[Random.Range(0, puntoGeneracion.Length)], 
-            puntoGeneracion[Random.Range(0, puntoGeneracion.Length)].position, Quaternion.identity);
+        for(int i = 0; i < 4; i++)
+        {
+            Instantiate(estrellaTeledirigida[i], puntoGeneracion[i].position, Quaternion.identity);
+            yield return new WaitForSeconds(0.7f);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

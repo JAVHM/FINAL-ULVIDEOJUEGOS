@@ -60,8 +60,10 @@ MonoBehaviour:
   waitingGeneration: 1
   chance: 100
   gameObjectsArray:
+  - {fileID: 7667101005593571870, guid: b5280eaa28b7f734e952c5464f944c51, type: 3}
   - {fileID: 7374706046114964017, guid: 48e363b4b7919bd4791ee2ed1376cab9, type: 3}
   - {fileID: 7667101005593571870, guid: 8a8aee82443a2db4690abc13b4f4ffa1, type: 3}
-  - {fileID: 7374706046114964017, guid: 48e363b4b7919bd4791ee2ed1376cab9, type: 3}
   - {fileID: 7667101005593571870, guid: 8a8aee82443a2db4690abc13b4f4ffa1, type: 3}
+  - {fileID: 7374706046114964017, guid: 48e363b4b7919bd4791ee2ed1376cab9, type: 3}
+  - {fileID: 6382675290381792544, guid: 5815ee0164e62734b9dfb79ec522ff2e, type: 3}
   temp: 0
