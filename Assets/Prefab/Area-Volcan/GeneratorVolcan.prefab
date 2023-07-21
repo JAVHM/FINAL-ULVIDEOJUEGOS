@@ -51,7 +51,7 @@ MonoBehaviour:
   instPortal: {fileID: 515715476522359549, guid: dc0e7948e9600c8498f434bf568c740d, type: 3}
   chunkSize: 0
   chunkSizeX: 250
-  chuncksPerArea: 10
+  chuncksPerArea: 15
   chunckCount: 5
   multiplier: 30
   waves: {fileID: 0}
