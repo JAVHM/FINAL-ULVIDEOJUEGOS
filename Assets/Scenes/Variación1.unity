@@ -1654,9 +1654,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnergy: 100
-  currentEnergy: 0
+  currentEnergy: 100
   energySlider: {fileID: 291760587}
-  multiplier: 0
+  multiplier: 1
 --- !u!1 &1152144151
 GameObject:
   m_ObjectHideFlags: 0

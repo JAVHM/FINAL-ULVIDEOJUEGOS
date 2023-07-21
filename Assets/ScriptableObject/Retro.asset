@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064529e8898f6cf47a686857e2256fed, type: 3}
   m_Name: Retro
   m_EditorClassIdentifier: 
-  hasFog: 0
-  fogColor: {r: 0, g: 0, b: 0, a: 0}
-  superiorColor: {r: 1, g: 1, b: 1, a: 0}
-  inferiorColor: {r: 1, g: 1, b: 1, a: 0}
+  hasFog: 1
+  fogColor: {r: 0, g: 0, b: 0, a: 1}
+  superiorColor: {r: 0, g: 0, b: 0, a: 1}
+  inferiorColor: {r: 0, g: 0, b: 0, a: 1}

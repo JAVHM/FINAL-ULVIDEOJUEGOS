@@ -49,6 +49,7 @@ namespace MFlight.Demo
         public float currentSpeed;// Velocidad actual de la nave
         private float timeElapsed;
         private PlayerShooter playerShooter;
+        private PlayerEnergy playerEnergy;
 
         [Header("Postprocesado")]
         public PostProcesado postProcess;
@@ -57,6 +58,7 @@ namespace MFlight.Demo
         {
             rigid = GetComponent<Rigidbody>();
             playerShooter = GetComponent<PlayerShooter>();
+            playerEnergy = GetComponent<PlayerEnergy>();
 
             if (controller == null)
                 Debug.LogError(name + ": Plane - Missing reference to MouseFlightController!");
@@ -70,6 +72,7 @@ namespace MFlight.Demo
                 currentSpeed = Mathf.SmoothStep(currentSpeed, velocidadMovimientoMax, timeElapsed / accelerationTime);
                 playerShooter.force = Mathf.SmoothStep(playerShooter.maxForce, playerShooter.maxForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
+                playerEnergy.multiplier = 3;
             }
             else
             {
@@ -78,6 +81,7 @@ namespace MFlight.Demo
                 currentSpeed = Mathf.SmoothStep(currentSpeed, thrust, timeElapsed / accelerationTime);
                 playerShooter.force = Mathf.SmoothStep(playerShooter.minForce, playerShooter.minForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
+                playerEnergy.multiplier = 1;
             }
 
             // When the player commands their own stick input, it should override what the

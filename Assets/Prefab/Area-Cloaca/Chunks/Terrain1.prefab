@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7840267503301108160}
+  - component: {fileID: 8260271807967405781}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958880569282719313}
   m_LocalRotation: {x: -0, y: -0, z: -0.38268414, w: 0.9238793}
-  m_LocalPosition: {x: 3527.36, y: 1889.2614, z: 1500}
+  m_LocalPosition: {x: 3838, y: 1303, z: 1500}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32,6 +33,19 @@ Transform:
   m_Father: {fileID: 2381241459557563190}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!114 &8260271807967405781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958880569282719313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb97cbcf97695944bd88144c0755006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 60
 --- !u!1 &2381241458903558488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,8 +2724,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2381241459307826915}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 740, y: -410, z: 0}
-  m_LocalScale: {x: 2000, y: 300, z: 2000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2100, y: 300, z: 2100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2213844836644624198}
@@ -5568,8 +5582,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36079824, y: 1, z: 3.1372495}
-  m_Center: {x: 0.0038992309, y: -0.0000000028007725, z: -0.01084369}
+  m_Size: {x: 0.3, y: 0.2, z: 3.1}
+  m_Center: {x: 0.01, y: 0.66, z: 0}
 --- !u!1 &7558891316366038291
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,5 +5627,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36079824, y: 1, z: 3.114092}
-  m_Center: {x: 0.0038992304, y: -0.000000035807656, z: 0.010653201}
+  m_Size: {x: 0.29, y: 0.2, z: 3}
+  m_Center: {x: 0, y: 0.66, z: 0}
