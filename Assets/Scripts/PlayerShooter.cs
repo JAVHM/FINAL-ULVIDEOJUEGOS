@@ -43,6 +43,7 @@ public class PlayerShooter : MonoBehaviour
     private void FireProjectile()
     {
         GameObject newProjectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        AudioManager.instance.Play("disparo");
         Rigidbody rb = newProjectile.GetComponent<Rigidbody>();
 
         // Aplicar una fuerza hacia adelante al proyectil para que se mueva en la dirección del FirePoint

@@ -9,4 +9,5 @@ public class AreaSO : ScriptableObject
     public Color fogColor;
     public Color superiorColor;
     public Color inferiorColor;
+    public string nombrecancion;
 }

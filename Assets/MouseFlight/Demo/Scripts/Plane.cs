@@ -73,6 +73,7 @@ namespace MFlight.Demo
                 playerShooter.force = Mathf.SmoothStep(playerShooter.maxForce, playerShooter.maxForce, timeElapsed / accelerationTime);
                 timeElapsed += Time.deltaTime;
                 playerEnergy.multiplier = 3;
+                AudioManager.instance.Play("turbo");
             }
             else
             {

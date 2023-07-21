@@ -72,7 +72,8 @@ public class PortalNewArea : MonoBehaviour
 
     private IEnumerator ChangeColorCoroutine()
     {
-        if(areaSO.hasFog == false)
+        AudioManager.instance.updateBGMusic(areaSO.nombrecancion);
+        if (areaSO.hasFog == false)
         {
             Camera.main.gameObject.GetComponent<Fog>().enabled = false;
         }
@@ -126,7 +127,7 @@ public class PortalNewArea : MonoBehaviour
         // Ensure the final color is exactly the targetColor
         colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor = areaSO.fogColor;
         dlsColor = dls.color = areaSO.superiorColor;
-        dliColor = dli.color = areaSO.inferiorColor;
+        dliColor = dli.color = areaSO.inferiorColor;        
         Destroy(this.gameObject);
     }
 }

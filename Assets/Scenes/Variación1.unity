@@ -1697,6 +1697,100 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -174}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1171100751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1171100753}
+  - component: {fileID: 1171100752}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1171100752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171100751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb0b9839e9b1944eab35014ec02ea38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSounds:
+  - name: oceano
+    clip: {fileID: 8300000, guid: 4b101d260cf0dc64586034003edeb2a5, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: retro
+    clip: {fileID: 8300000, guid: 179e99a12bda2b5428b2766249fa04de, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: jefe
+    clip: {fileID: 8300000, guid: 5b4cd9e2800894a4b81a6bd0107cc290, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: cloaca
+    clip: {fileID: 8300000, guid: fb32dfa21ee815a44a7d6d6ab7adb247, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: menu
+    clip: {fileID: 8300000, guid: bd75fb5f5bc269242947a64165e0df26, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: tutorial
+    clip: {fileID: 8300000, guid: 7189d1034a95a7545bdd8952800a11c8, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: volcan
+    clip: {fileID: 8300000, guid: 250c1959d30de704985d4074c864188c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  sounds:
+  - name: disparo
+    clip: {fileID: 8300000, guid: 1c76d94abd108ab4583c0206e5516234, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1171100753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171100751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 366, y: 243, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1251851855
 GameObject:
   m_ObjectHideFlags: 0
