@@ -119,6 +119,7 @@ MonoBehaviour:
   dlsColor: {r: 0, g: 0, b: 0, a: 0}
   dliColor: {r: 0, g: 0, b: 0, a: 0}
   areaSO: {fileID: 0}
+  Boss1: {fileID: 0}
 --- !u!1 &3606792633469556823
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 3606792633469556823}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 750, z: -3750}
-  m_LocalScale: {x: 7500, y: 300, z: 7000}
+  m_LocalScale: {x: 8000, y: 300, z: 8000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8455252277561594206}
@@ -229,14 +230,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cb028219f2f39478286da17ae53820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generator: {fileID: 5015706939080574023, guid: 1b8208e021cc4d843ae42356baacc1e5, type: 3}
+  generator: {fileID: 5167696249173478128, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
   target: {fileID: 0}
   colorOG: {r: 0, g: 0, b: 0, a: 0}
   dls: {fileID: 0}
   dli: {fileID: 0}
   dlsColor: {r: 0, g: 0, b: 0, a: 0}
   dliColor: {r: 0, g: 0, b: 0, a: 0}
-  areaSO: {fileID: 11400000, guid: cb7de2cc5676b3744aadaac0971173dc, type: 2}
+  areaSO: {fileID: 11400000, guid: 62ba82f957749384097c93389fac41ec, type: 2}
+  Boss1: {fileID: 896061016635191551, guid: 5398764cbd74767449bec89b7f5d433b, type: 3}
 --- !u!1 &8455252277561594201
 GameObject:
   m_ObjectHideFlags: 0

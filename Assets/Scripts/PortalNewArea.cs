@@ -19,7 +19,12 @@ public class PortalNewArea : MonoBehaviour
     public Color dliColor;
 
     public AreaSO areaSO;
+    public GameObject Boss1;
 
+    private void Start()
+    {
+        //target = GameObject.Find("Player").transform;
+    }
 
     private void Update()
     {
@@ -67,6 +72,13 @@ public class PortalNewArea : MonoBehaviour
             //newObject.GetComponent<AreaGenerator>().target = other.gameObject.transform;
             target = other.gameObject.transform;
             colorOG = Camera.main.gameObject.GetComponent<Fog>().fogColor;
+
+            if (Boss1 != null)
+            {
+                GameObject boss = Instantiate(Boss1, new Vector3(4000, 750, target.position.z + 2000), Quaternion.identity);
+                boss.GetComponent<BossMovement>().target = target;
+                boss.GetComponentInChildren<EyeFollow>().target = target;
+            }
         }
     }
 

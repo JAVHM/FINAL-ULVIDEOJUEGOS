@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 886200133}
+    - target: {fileID: 1509154690, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
+      propertyPath: chuncksPerArea
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5167696249173477901, guid: 1def6230187931647ba1bf54c1518a9a, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2119,7 +2123,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9433962, g: 0.91675484, b: 0.78764683, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

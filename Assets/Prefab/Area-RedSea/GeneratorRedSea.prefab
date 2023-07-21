@@ -48,10 +48,10 @@ MonoBehaviour:
   inferior: {fileID: 3650170761953652648, guid: 1f8f03f17c383b742b239de01a9d75ca, type: 3}
   superior: {fileID: 4270982207342007800, guid: 528223a22c95bbd4ba692ebdbffb8937, type: 3}
   lateral: {fileID: 2434784411416633216, guid: 67fb450797ae78044a235402b27e5fcd, type: 3}
-  instPortal: {fileID: 7829753972771283583, guid: a9ea11db26589394892fae29dccfee1c, type: 3}
+  instPortal: {fileID: 3688105245239954514, guid: 471882b6558bf82489cc11b88e203a13, type: 3}
   chunkSize: 0
   chunkSizeX: 250
-  chuncksPerArea: 15
+  chuncksPerArea: 3
   chunckCount: 1
   multiplier: 30
   waves: {fileID: 0}
