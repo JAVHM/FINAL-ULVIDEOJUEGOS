@@ -17,3 +17,4 @@ MonoBehaviour:
   superiorColor: {r: 0.7532468, g: 0, b: 1, a: 1}
   inferiorColor: {r: 0.69462466, g: 0.07262372, b: 0.9056604, a: 1}
   nombrecancion: cloaca
+  dialogo: diacloaca

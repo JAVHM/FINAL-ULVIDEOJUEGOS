@@ -73,6 +73,7 @@ public class PortalNewArea : MonoBehaviour
     private IEnumerator ChangeColorCoroutine()
     {
         AudioManager.instance.updateBGMusic(areaSO.nombrecancion);
+        AudioManager.instance.Play(areaSO.dialogo);
         if (areaSO.hasFog == false)
         {
             Camera.main.gameObject.GetComponent<Fog>().enabled = false;

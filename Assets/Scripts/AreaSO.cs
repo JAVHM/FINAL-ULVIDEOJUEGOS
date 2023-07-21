@@ -10,4 +10,5 @@ public class AreaSO : ScriptableObject
     public Color superiorColor;
     public Color inferiorColor;
     public string nombrecancion;
+    public string dialogo;
 }

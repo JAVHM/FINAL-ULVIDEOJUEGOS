@@ -16,3 +16,5 @@ MonoBehaviour:
   fogColor: {r: 0.1846572, g: 0.15307939, b: 0.754717, a: 1}
   superiorColor: {r: 0.56986284, g: 0.37126204, b: 0.764151, a: 1}
   inferiorColor: {r: 0, g: 0, b: 1, a: 1}
+  nombrecancion: jefe
+  dialogo: diajefe

@@ -20,7 +20,6 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
         foreach (Sound s in bgmSounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();

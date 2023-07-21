@@ -1807,6 +1807,42 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: diacloaca
+    clip: {fileID: 8300000, guid: 2a5a0ef8d2cf40548be32723b9e00871, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: diaoceano
+    clip: {fileID: 8300000, guid: b238aa0f8f1d2824c9cdaa552d120c8c, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: diajefe
+    clip: {fileID: 8300000, guid: 7b3ed662491819e4995b1c49c9021183, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: diaretro
+    clip: {fileID: 8300000, guid: 1bb056c9e5df3d7478197b42f7dd784b, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: diavolcan
+    clip: {fileID: 8300000, guid: 397c25c4820059d439725044076e03f6, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pickup
+    clip: {fileID: 8300000, guid: aec6ca291f522984496fa5d68f3c0454, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1171100753
 Transform:
   m_ObjectHideFlags: 0

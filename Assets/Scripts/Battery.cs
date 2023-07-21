@@ -10,6 +10,7 @@ public class Battery : MonoBehaviour
     {
         if (other.CompareTag("Player") && temp)
         {
+            AudioManager.instance.Play("pickup");
             temp = false;
             other.transform.parent.gameObject.GetComponent<PlayerEnergy>().GetEnergy(amount);
             Destroy(this.gameObject);

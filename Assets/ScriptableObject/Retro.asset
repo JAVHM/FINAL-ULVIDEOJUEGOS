@@ -17,3 +17,4 @@ MonoBehaviour:
   superiorColor: {r: 0, g: 0, b: 0, a: 1}
   inferiorColor: {r: 0, g: 0, b: 0, a: 1}
   nombrecancion: retro
+  dialogo: diaretro

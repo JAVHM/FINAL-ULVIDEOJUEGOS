@@ -17,3 +17,4 @@ MonoBehaviour:
   superiorColor: {r: 0.7924528, g: 0.011213934, b: 0.011213934, a: 1}
   inferiorColor: {r: 1, g: 0, b: 0, a: 1}
   nombrecancion: volcan
+  dialogo: diavolcan
