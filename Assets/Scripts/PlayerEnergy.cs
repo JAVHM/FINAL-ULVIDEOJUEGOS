@@ -2,30 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerEnergy : MonoBehaviour
 {
-    public float maxEnergy = 100f; // Energía máxima del avión
-    public float currentEnergy;   // Energía actual del avión
+    public float maxEnergy = 100f; // Energï¿½a mï¿½xima del aviï¿½n
+    public float currentEnergy;   // Energï¿½a actual del aviï¿½n
 
     public Slider energySlider;   // Referencia al Slider UI
     public float multiplier;
 
     void Start()
     {
-        currentEnergy = maxEnergy; // Establecer la energía inicial al máximo
+        currentEnergy = maxEnergy; // Establecer la energï¿½a inicial al mï¿½ximo
         UpdateEnergyUI();          // Actualizar el Slider UI con el valor inicial
     }
 
     void Update()
     {
-        // Reducir la energía del avión con el tiempo
+        // Reducir la energï¿½a del aviï¿½n con el tiempo
         currentEnergy -= Time.deltaTime * multiplier;
 
-        // Asegurarse de que la energía nunca sea negativa
+        // Asegurarse de que la energï¿½a nunca sea negativa
         currentEnergy = Mathf.Max(currentEnergy, 0f);
 
-        UpdateEnergyUI(); // Actualizar el Slider UI con el nuevo valor de energía
+        UpdateEnergyUI(); // Actualizar el Slider UI con el nuevo valor de energï¿½a
+
+        if(currentEnergy == 0){EnergyDeath();}
     }
 
     void UpdateEnergyUI()
@@ -39,5 +42,12 @@ public class PlayerEnergy : MonoBehaviour
         currentEnergy += e;
         if (currentEnergy >= maxEnergy)
             currentEnergy = maxEnergy;
+    }
+
+    void EnergyDeath()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
